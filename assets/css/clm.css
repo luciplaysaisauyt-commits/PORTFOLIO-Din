@@ -1,3 +1,42 @@
+/* ── Same layout pattern as UnnieBox ── */
+:root {
+  --navH: 64px;
+  --subnavH: 52px;
+}
+
+/* Header fixed on top */
+#topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 200;
+}
+
+/* page-wrap starts below header */
+.clm-page-wrap {
+  padding-top: var(--navH);
+}
+
+/* subnav sticks just below header */
+.case-subnav {
+  position: sticky;
+  top: var(--navH);
+  z-index: 120;
+}
+
+/* anchors clear header + subnav when scrolled to */
+.clm-content .case-section {
+  scroll-margin-top: calc(var(--navH) + var(--subnavH) + 24px);
+}
+
+/* page enter animation — same as UnnieBox */
+body:not(.is-loaded) .clm-content { opacity: 0; transform: translateY(14px); }
+.clm-content { transition: opacity 520ms ease, transform 520ms ease; }
+
+@media (max-width: 640px) {
+  :root { --navH: 72px; --subnavH: 64px; }
+}
+
 /* CLM case page styles only */
 /* Header styles intentionally not included */
 /* Uses global header from /assets/style.css */

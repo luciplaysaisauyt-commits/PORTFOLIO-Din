@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@200;300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="icon" type="image/png" href="/assets/DIN.png">
+  <link rel="stylesheet" href="/assets/css/contact.css">
 </head>
 <body>
 
@@ -17,7 +18,6 @@
 <div class="din-cursor-ring" id="dinCursorRing"></div>
 
 <%- include('partials/header') %>
-
 
 <!-- HERO -->
 <section class="contact-hero">
@@ -34,38 +34,46 @@
     <h2>Contact Information</h2>
     <p class="contact-left-sub">Fill out the form and I'll be in touch soon.</p>
 
-    <div class="contact-detail">
-      <div class="contact-detail-icon"><img src="/assets/images/phone.svg" alt=""></div>
-      <div>
-        <p class="contact-detail-label">Phone</p>
-        <p class="contact-detail-value">+1 012 3456 789</p>
+    <div class="contact-details-wrap">
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-detail-label">Email</p>
+          <p class="contact-detail-value">din.design.world@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <div>
+          <p class="contact-detail-label">Location</p>
+          <p class="contact-detail-value">Canada</p>
+        </div>
       </div>
     </div>
 
-    <div class="contact-detail">
-      <div class="contact-detail-icon"><img src="/assets/images/email.svg" alt=""></div>
-      <div>
-        <p class="contact-detail-label">Email</p>
-        <p class="contact-detail-value">din.design.studio@gmail.com</p>
-      </div>
+    <!-- Decorative quote -->
+    <div class="contact-quote">
+      <p>"Great design is not just what it looks like — it's how it works."</p>
     </div>
 
-    <div class="contact-detail">
-      <div class="contact-detail-icon"><img src="/assets/images/location.svg" alt=""></div>
-      <div>
-        <p class="contact-detail-label">Location</p>
-        <p class="contact-detail-value">Canada</p>
-      </div>
-    </div>
-
-    <div class="contact-socials">
-      <a href="#" class="social-btn" aria-label="Twitter"><img src="/assets/images/social1.svg" alt=""></a>
-      <a href="#" class="social-btn" aria-label="Instagram"><img src="/assets/images/social.svg" alt=""></a>
-      <a href="#" class="social-btn" aria-label="LinkedIn"><img src="/assets/images/social3.svg" alt=""></a>
+    <!-- Availability badge -->
+    <div class="contact-availability">
+      <span class="avail-dot"></span>
+      <span>Available for new projects</span>
     </div>
   </div>
 
-  <!-- FORM (id=contactForm — handled by main.js) -->
+  <!-- FORM -->
   <form class="contact-right" id="contactForm">
     <div class="form-grid">
       <div class="field">
@@ -76,13 +84,9 @@
         <label for="lastName">Last Name</label>
         <input id="lastName" name="lastName" type="text" placeholder="Doe" required>
       </div>
-      <div class="field">
+      <div class="field full">
         <label for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="john@example.com" required>
-      </div>
-      <div class="field">
-        <label for="phone">Phone</label>
-        <input id="phone" name="phone" type="tel" placeholder="+1 012 3456 789">
       </div>
       <div class="field full">
         <label for="message">Message</label>
@@ -101,7 +105,7 @@
   </form>
 </div>
 
-<!-- SUCCESS POPUP (id=popup — matches main.js) -->
+<!-- SUCCESS POPUP -->
 <div class="popup" id="popup">
   <div class="popup-box">
     <div class="popup-icon">✓</div>
@@ -127,7 +131,7 @@
     </div>
     <div class="site-footer__col">
       <p class="site-footer__col-title">Contact</p>
-      <div class="site-footer__item">din.design.studio@gmail.com</div>
+      <div class="site-footer__item">din.design.world@gmail.com</div>
       <div class="site-footer__item">Canada</div>
     </div>
     <div class="site-footer__col">
@@ -145,7 +149,6 @@
   </div>
 </footer>
 
-<!-- main.js handles: mobile menu, contactForm popup, field highlights, newsletter -->
 <script src="/assets/js/main.js" defer></script>
 </body>
 </html>

@@ -13,34 +13,58 @@
 </head>
 <body>
 
+<!-- CUSTOM CURSOR -->
+<div class="din-cursor" id="dinCursor"></div>
+<div class="din-cursor-ring" id="dinCursorRing"></div>
+
 <%- include('partials/header') %>
 
 
 <!-- ═══ HERO ═══ -->
 <section class="idx-hero">
-  <!-- Particle canvas — single, full hero -->
   <canvas id="heroCanvas" class="idx-hero-canvas" aria-hidden="true"></canvas>
 
+  <!-- corner gold marks -->
+  <div class="idx-hero-corner idx-hero-corner--tl" aria-hidden="true">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M0 20 L0 0 L20 0"/>
+    </svg>
+  </div>
+  <div class="idx-hero-corner idx-hero-corner--br" aria-hidden="true">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1">
+      <path d="M20 0 L20 20 L0 20"/>
+    </svg>
+  </div>
+
   <div class="idx-hero-inner">
-    <p class="idx-eyebrow fu">Design &amp; Development · 2025</p>
+    <!-- gold DIN label -->
+    <div class="idx-din-label fu">Studio · Portfolio</div>
+
+    <p class="idx-eyebrow fu fd1">Design &amp; Development · 2025</p>
+
     <h1 class="fu fd1">
       Crafting<br>
       <em>digital</em><br>
       experiences
     </h1>
+
+    <div class="idx-hero-divider fu fd2"></div>
+
     <p class="idx-sub fu fd2">
       Selected works in UI/UX &amp; frontend — where ideas become interfaces.
     </p>
+
     <a href="#works" class="idx-scroll fu fd3">
       <span>Scroll to explore</span>
-      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
       </svg>
     </a>
   </div>
 
-  <div class="idx-hero-hint" aria-hidden="true">Move your mouse</div>
+  <div class="idx-hero-hint" aria-hidden="true">Move your mouse · Click to burst</div>
 </section>
+
 
 <!-- ═══ WORKS ═══ -->
 <section class="idx-works" id="works">
@@ -55,13 +79,13 @@
     </div>
     <div class="idx-works-nav">
       <button class="wnav-btn" id="wPrev" aria-label="Prev">
-        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"/>
         </svg>
       </button>
       <div class="wnav-track"><div class="wnav-fill" id="wFill"></div></div>
       <button class="wnav-btn" id="wNext" aria-label="Next">
-        <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
         </svg>
       </button>
@@ -73,9 +97,13 @@
   <div class="idx-track-wrap" id="wTrackWrap">
     <div class="idx-track" id="wTrack">
 
-
       <article class="wcard" data-href="/portfolio/clm">
-        <div class="wcard-bg wbg7"><div class="wcard-mock"><div class="wmock-bar"><span></span><span></span><span></span></div><div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml s"></div><div class="ml m"></div></div></div></div>
+        <div class="wcard-bg wbg7">
+          <div class="wcard-mock">
+            <div class="wmock-bar"><span></span><span></span><span></span></div>
+            <div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml s"></div><div class="ml m"></div></div>
+          </div>
+        </div>
         <div class="wcard-veil"></div>
         <div class="wcard-num">01</div>
         <div class="wcard-foot">
@@ -85,12 +113,23 @@
         <div class="wcard-reveal">
           <p>Full platform redesign for competitive Mafia community with ratings, tournaments and admin.</p>
           <div class="rtags"><span>Figma</span><span>Design System</span><span>Case Study</span></div>
-          <div class="rlink">Open case study<div class="rarrow"><svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          <div class="rlink">Open case study
+            <div class="rarrow">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </article>
 
       <article class="wcard" data-href="/portfolio/unnie-box">
-        <div class="wcard-bg wbg1"><div class="wcard-mock"><div class="wmock-bar"><span></span><span></span><span></span></div><div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml s"></div><div class="ml m"></div></div></div></div>
+        <div class="wcard-bg wbg1">
+          <div class="wcard-mock">
+            <div class="wmock-bar"><span></span><span></span><span></span></div>
+            <div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml s"></div><div class="ml m"></div></div>
+          </div>
+        </div>
         <div class="wcard-veil"></div>
         <div class="wcard-num">02</div>
         <div class="wcard-foot">
@@ -100,7 +139,13 @@
         <div class="wcard-reveal">
           <p>High fidelity landing page case with UI kit, modals and design system.</p>
           <div class="rtags"><span>Figma</span><span>UI Kit</span><span>Case Study</span></div>
-          <div class="rlink">Open case study<div class="rarrow"><svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          <div class="rlink">Open case study
+            <div class="rarrow">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -108,50 +153,8 @@
   </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
-<section class="idx-about" id="about-us">
-  <div class="idx-about-inner">
-    <div class="idx-about-left">
-      <span class="label-tag">About</span>
-      <h2>Design<br>with<br><em>purpose</em></h2>
-    </div>
-    <div class="idx-about-right">
-      <p class="about-lead">
-        Designer and developer with a certified background in Web Design, Interactive Media, and Front-End Development — currently based in Canada.
-      </p>
-      <div class="about-certs">
-        <div class="cert-item"><span class="cert-icon">◆</span><div><span class="cert-title">Web Design</span><span class="cert-school">Skillbox · Certificate</span></div></div>
-        <div class="cert-item"><span class="cert-icon">◆</span><div><span class="cert-title">Interactive Media Design</span><span class="cert-school">Seneca College · Diploma</span></div></div>
-      </div>
-      <div class="about-skills-grid">
-        <div class="skill-group">
-          <span class="sg-label">Design Tools</span>
-          <div class="sg-tags">
-            <span>Figma</span><span>Canva</span><span>Adobe Photoshop</span>
-            <span>Adobe Illustrator</span><span>Adobe XD</span>
-            <span>Adobe InDesign</span><span>Adobe After Effects</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <span class="sg-label">Development</span>
-          <div class="sg-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>EJS</span></div>
-        </div>
-        <div class="skill-group">
-          <span class="sg-label">Disciplines</span>
-          <div class="sg-tags">
-            <span>UI / UX Design</span><span>Graphic Design</span>
-            <span>3D Modelling</span><span>Motion Graphics</span>
-            <span>Brand Identity</span><span>Responsive Design</span>
-          </div>
-        </div>
-      </div>
-      <div class="about-ctas">
-        <a href="/about" class="btn-primary">Full story</a>
-        <a href="/contact" class="btn-ghost">Get in touch →</a>
-      </div>
-    </div>
-  </div>
-</section>
+
+
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="site-footer">
@@ -169,7 +172,7 @@
     </div>
     <div class="site-footer__col">
       <p class="site-footer__col-title">Contact</p>
-      <div class="site-footer__item">din.design.studio@gmail.com</div>
+      <div class="site-footer__item">din.design.world@gmail.com</div>
       <div class="site-footer__item">Canada</div>
     </div>
     <div class="site-footer__col">

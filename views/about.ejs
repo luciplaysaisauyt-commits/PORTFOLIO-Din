@@ -4,53 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIN – About</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="/assets/DIN.png">
   <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/css/about.css">
 </head>
 <body>
 
-<!-- CUSTOM CURSOR -->
 <div class="din-cursor" id="dinCursor"></div>
 <div class="din-cursor-ring" id="dinCursorRing"></div>
 
 <%- include('partials/header') %>
 
+<!-- ── 1. HERO ── -->
 <section class="about-hero">
-  <div class="about-hero-inner">
-    <div class="about-hero-photo fu">
-      <img src="/assets/images/me.jpg" alt="Din portrait">
+  <div class="about-hero-grid">
+
+    <div class="about-hero-left">
+      <div class="about-photo-wrap">
+        <img src="/assets/images/me.jpg" alt="Din portrait">
+        <div class="about-photo-badge">
+          <span class="avail-dot"></span>
+          <span>Available for work</span>
+        </div>
+      </div>
     </div>
-    <p class="about-eyebrow fu d1">Creative Designer &amp; Developer</p>
-    <h1 class="fu d2">Crafting <em>digital</em><br>experiences</h1>
-    <p class="about-hero-sub fu d3">
-      Driven by curiosity and a love for design, I build simple, functional and visually striking interfaces — where creativity meets technology.
-    </p>
-    <div class="scroll-indicator fu d4">
-      <span>Scroll</span>
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/>
-      </svg>
+
+    <div class="about-hero-right">
+      <p class="about-eyebrow">Creative Designer &amp; Developer</p>
+      <h1>Crafting <em>digital</em><br>experiences</h1>
+      <p class="about-hero-sub">
+        Driven by curiosity and a love for design, I build simple, functional and visually striking interfaces — where creativity meets technology.
+      </p>
+      <div class="about-hero-stats">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Years exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Diplomas</span>
+        </div>
+      </div>
+      <div class="about-hero-actions">
+        <a href="/contact" class="about-cta-btn">Get in touch</a>
+        <a href="/gallery" class="about-outline-btn">View work →</a>
+      </div>
     </div>
+
   </div>
 </section>
 
-<section id="about" class="about-bio">
-  <div class="about-bio-grid">
-    <div>
-      <p class="about-bio-label">About me</p>
-      <h2>Design is my<br>language</h2>
+<!-- ── 2. ABOUT + SKILLS ── -->
+<section class="about-detail" id="about">
+  <div class="about-detail-inner">
 
-      <p>
+    <div class="about-detail-left">
+      <span class="label-tag">About</span>
+      <div class="about-detail-bar"></div>
+      <h2>Design<br>with<br><em>purpose</em></h2>
+    </div>
+
+    <div class="about-detail-right">
+      <p class="about-lead">
+        Designer and developer with a certified background in Web Design, Interactive Media, and Front-End Development — currently based in Canada.
+      </p>
+      <p class="about-body">
         As a student and self-driven designer, I constantly explore new ideas and dive deeper into modern design principles. Every project is an opportunity to learn, experiment, and push the boundaries of what's possible on screen.
       </p>
 
-      <p>
-        I use most of my expertise at the intersection of design and front-end development — building experiences that are both beautiful and functional.
-      </p>
+      <div class="about-certs">
+        <div class="cert-item">
+          <span class="cert-icon">◆</span>
+          <div>
+            <span class="cert-title">Web Design</span>
+            <span class="cert-school">Skillbox · Certificate</span>
+          </div>
+        </div>
+        <div class="cert-item">
+          <span class="cert-icon">◆</span>
+          <div>
+            <span class="cert-title">Interactive Media Design</span>
+            <span class="cert-school">Seneca College · Diploma</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-skills-grid">
+        <div class="skill-group">
+          <span class="sg-label">Design Tools</span>
+          <div class="sg-tags">
+            <span>Figma</span><span>Canva</span><span>Adobe Photoshop</span>
+            <span>Adobe Illustrator</span><span>Adobe XD</span>
+            <span>Adobe InDesign</span><span>Adobe After Effects</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="sg-label">Development</span>
+          <div class="sg-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>EJS</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <span class="sg-label">Disciplines</span>
+          <div class="sg-tags">
+            <span>UI / UX Design</span><span>Graphic Design</span>
+            <span>3D Modelling</span><span>Motion Graphics</span>
+            <span>Brand Identity</span><span>Responsive Design</span>
+          </div>
+        </div>
+      </div>
 
       <a href="/gallery" class="more-link">
         View my work
@@ -60,71 +131,25 @@
       </a>
     </div>
 
-    <div class="about-bio-right">
-      <p class="about-bio-label">Certificates</p>
-      <div class="skills-list">
-        <div class="skill-item">
-          <span class="skill-name">Web Design</span>
-          <span class="skill-tag">SkillBox</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Interactive Media Design</span>
-          <span class="skill-tag">Seneca College</span>
-        </div>
-      </div>
-
-      <p class="about-bio-label" style="margin-top:28px">Tools &amp; Skills</p>
-      <div class="skills-list">
-        <div class="skill-item">
-          <span class="skill-name">Adobe Creative Suite</span>
-          <span class="skill-tag">Ps · Ai · Id · Ae · XD</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">UI / UX Design</span>
-          <span class="skill-tag">Figma</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Front-End Development</span>
-          <span class="skill-tag">HTML · CSS · JS</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">3D Modelling</span>
-          <span class="skill-tag">Blender</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Motion Graphics</span>
-          <span class="skill-tag">After Effects</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Graphic Design</span>
-          <span class="skill-tag">Print · Brand Identity</span>
-        </div>
-        <div class="skill-item">
-          <span class="skill-name">Responsive Design</span>
-          <span class="skill-tag">Mobile-first</span>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
+<!-- ── 3. CTA ── -->
 <section class="about-cta">
   <small>That's all for now.</small>
   <h2>Got a project in mind?</h2>
   <h3>Let's talk</h3>
-
   <div class="cta-grid">
     <div>
       <div class="cta-field">
         <label>Email</label>
-        <p>din.design.studio@gmail.com</p>
+        <p>din.design.world@gmail.com</p>
       </div>
       <div class="cta-field">
-        <label>Phone</label>
-        <p>+1 (000) 000-0000</p>
+        <label>Location</label>
+        <p>Canada</p>
       </div>
     </div>
-
     <div class="cta-btn-wrap">
       <button class="cta-btn" onclick="window.location='/contact'">Get in touch</button>
     </div>
@@ -137,7 +162,6 @@
       <img src="/assets/DIN.png" alt="DIN Logo" class="site-footer__logo-img">
       <p class="site-footer__tagline">Creative designer &amp; developer crafting digital experiences that matter.</p>
     </div>
-
     <div class="site-footer__col">
       <p class="site-footer__col-title">Navigation</p>
       <nav class="site-footer__nav">
@@ -147,13 +171,11 @@
         <a href="/contact">Contact</a>
       </nav>
     </div>
-
     <div class="site-footer__col">
       <p class="site-footer__col-title">Contact</p>
-      <div class="site-footer__item">din.design.studio@gmail.com</div>
+      <div class="site-footer__item">din.design.world@gmail.com</div>
       <div class="site-footer__item">Canada</div>
     </div>
-
     <div class="site-footer__col">
       <p class="site-footer__col-title">Newsletter</p>
       <p class="site-footer__form-label">Stay updated with new projects and design insights.</p>
@@ -163,7 +185,6 @@
       </form>
     </div>
   </div>
-
   <div class="site-footer__bottom">
     <span>© 2025 DIN. All rights reserved.</span>
     <span>Designed &amp; built with care</span>

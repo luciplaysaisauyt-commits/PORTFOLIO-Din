@@ -1,3 +1,4 @@
+// nav height CSS var
 const nav = document.getElementById('topnav');
 if (nav) {
   const setNavH = () => {
@@ -6,8 +7,6 @@ if (nav) {
   setNavH();
   window.addEventListener('resize', setNavH);
 }
-
-
 
 (() => {
   // progress bar
@@ -20,7 +19,7 @@ if (nav) {
     }, { passive: true });
   }
 
-  // reveal
+  // scroll reveal
   const ro = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
       if (!e.isIntersecting) return;
@@ -28,12 +27,11 @@ if (nav) {
       ro.unobserve(e.target);
     });
   }, { threshold: 0.07 });
-
   document.querySelectorAll('[data-reveal]').forEach((el) => ro.observe(el));
 
-  // section active state (subnav + toc if exists)
+  // subnav + toc active state
   const tocLinks = document.querySelectorAll('.case-toc a');
-  const subLinks = document.querySelectorAll('.subnav-pill a');
+  const subLinks = document.querySelectorAll('.subnav-pill a, .case-subnav-pill a');
 
   if (tocLinks.length || subLinks.length) {
     const secObs = new IntersectionObserver((entries) => {
@@ -45,31 +43,45 @@ if (nav) {
         });
       });
     }, { threshold: 0.2 });
-
     document.querySelectorAll('.case-section[id]').forEach((s) => secObs.observe(s));
   }
 
-  // lightbox (make available for onclick in HTML)
+  // lightbox
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('imgModalSrc');
+
+  if (modal && modalImg) {
+    // auto-bind clickable images
+    document.querySelectorAll('.screen-card img, .ba-card img, .hero-img-wrap img, .uikit-img img').forEach((img) => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('no-scroll');
+      });
+    });
+
+    // close handlers
+    const closeModal = () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+    };
+
+    modal.querySelectorAll('[data-close]').forEach((el) => el.addEventListener('click', closeModal));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+  }
+
+  // legacy support for onclick="openLightbox(...)" in HTML
   window.openLightbox = function (src) {
-    const full = (src.startsWith('/') || src.startsWith('http')) ? src : ('/images/clm/' + src);
-    const img = document.getElementById('lightboxImg');
-    const modal = document.getElementById('imgModal');
-    if (!img || !modal) return;
-
-    img.src = full;
-    modal.classList.add('open');
-    document.body.classList.add('no-scroll');
+    const full = (src.startsWith('/') || src.startsWith('http')) ? src : '/images/clm/' + src;
+    if (modalImg && modal) {
+      modalImg.src = full;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
   };
 
-  window.closeLightbox = function () {
-    const modal = document.getElementById('imgModal');
-    if (!modal) return;
-
-    modal.classList.remove('open');
-    document.body.classList.remove('no-scroll');
-  };
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') window.closeLightbox();
-  });
 })();

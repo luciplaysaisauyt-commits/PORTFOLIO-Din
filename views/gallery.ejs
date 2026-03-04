@@ -19,36 +19,53 @@
 
 <%- include('partials/header') %>
 
-<!-- HERO -->
+<!-- ═══ HERO ═══ -->
 <section class="gl-hero">
   <div class="gl-hero-inner">
     <p class="gl-eyebrow fu">Portfolio · All Projects</p>
     <h1 class="fu fd1">All<br><em>Work</em></h1>
     <p class="gl-sub fu fd2">
-      A curated selection of interfaces, clones and concept projects — documenting my journey in design &amp; development.
+      A curated selection of interfaces, clones and concept projects —
+      documenting my journey in design &amp; development.
     </p>
   </div>
+
   <div class="gl-hero-count fu fd3">
     <span class="gl-count-n">11</span>
     <span class="gl-count-l">Projects</span>
   </div>
 </section>
 
-<!-- PROJECTS LIST — same card style as Home -->
+
+<!-- ═══ FILTER BAR ═══ -->
+<div class="gl-filters fu fd4">
+  <button class="gl-filter-btn active" data-filter="all">All</button>
+  <div class="gl-filter-sep"></div>
+  <button class="gl-filter-btn" data-filter="ui-ux">UI / UX</button>
+  <button class="gl-filter-btn" data-filter="web">Web Design</button>
+  <button class="gl-filter-btn" data-filter="brand">Branding</button>
+  <button class="gl-filter-btn" data-filter="dev">Development</button>
+</div>
+
+
+<!-- ═══ CARDS (horizontal scroll) ═══ -->
 <section class="gl-works">
-  <div class="gl-works-head">
+  <div class="gl-works-head fu">
     <span class="label-tag">Selected Work</span>
+    <span class="gl-works-meta">Showing <span id="glCount">2</span> projects</span>
   </div>
 
   <div class="gl-track-wrap" id="glWrap">
     <div class="gl-track" id="glTrack">
 
-
-      <article class="wcard" data-href="/portfolio/clm">
+      <article class="wcard" data-href="/portfolio/clm" data-cat="ui-ux">
         <div class="wcard-bg wbg7">
           <div class="wcard-mock">
             <div class="wmock-bar"><span></span><span></span><span></span></div>
-            <div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml m"></div><div class="ml s"></div></div>
+            <div class="wmock-body">
+              <div class="ml a"></div><div class="ml l"></div>
+              <div class="ml m"></div><div class="ml s"></div>
+            </div>
           </div>
         </div>
         <div class="wcard-veil"></div>
@@ -60,28 +77,42 @@
         <div class="wcard-reveal">
           <p>Full redesign of Mafia platform with ratings, tournaments, clubs and admin panel.</p>
           <div class="rtags"><span>Figma</span><span>Design System</span><span>Case Study</span></div>
-          <div class="rlink">Open case study <div class="rarrow"><svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          <div class="rlink">Open case study
+            <div class="rarrow">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </article>
 
-
-      <article class="wcard" data-href="/portfolio/unnie-box">
+      <article class="wcard" data-href="/portfolio/unnie-box" data-cat="web">
         <div class="wcard-bg wbg6">
           <div class="wcard-mock">
             <div class="wmock-bar"><span></span><span></span><span></span></div>
-            <div class="wmock-body"><div class="ml a"></div><div class="ml l"></div><div class="ml s"></div><div class="ml m"></div></div>
+            <div class="wmock-body">
+              <div class="ml a"></div><div class="ml l"></div>
+              <div class="ml s"></div><div class="ml m"></div>
+            </div>
           </div>
         </div>
         <div class="wcard-veil"></div>
-        <div class="wcard-num">04</div>
+        <div class="wcard-num">02</div>
         <div class="wcard-foot">
-          <div class="wcard-cat">UI UX Design</div>
+          <div class="wcard-cat">UI Web Design</div>
           <h3 class="wcard-title">Unnie Box<br>Landing Page</h3>
         </div>
         <div class="wcard-reveal">
           <p>Korean beauty subscription box landing page focused on trust, conversion, and delight.</p>
           <div class="rtags"><span>Figma</span><span>UI Kit</span><span>Landing</span></div>
-          <div class="rlink">Open case study <div class="rarrow"><svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          <div class="rlink">Open case study
+            <div class="rarrow">
+              <svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7v10"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </article>
 
@@ -89,8 +120,56 @@
   </div>
 
 
+  <!-- ═══ GOLD DIVIDER ═══ -->
+  <div class="gl-divider"></div>
 
-<!-- FOOTER -->
+
+  <!-- ═══ LIST VIEW ═══ -->
+  <div class="gl-list-head fu">
+    <span>#</span>
+    <span>Project</span>
+    <span>Type</span>
+    <span>Year</span>
+    <span></span>
+  </div>
+
+  <div class="gl-list fu fd1" id="glList">
+
+    <a class="gl-item" href="/portfolio/clm" data-cat="ui-ux">
+      <span class="gl-item-num">01</span>
+      <div class="gl-item-info">
+        <div class="gl-item-tags"><span>UI UX</span><span>Redesign</span></div>
+        <h3>CLM Mafia Platform</h3>
+      </div>
+      <span class="gl-item-type">Case Study</span>
+      <span class="gl-item-year">2024</span>
+      <div class="gl-item-arrow">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7v10"/>
+        </svg>
+      </div>
+    </a>
+
+    <a class="gl-item" href="/portfolio/unnie-box" data-cat="web">
+      <span class="gl-item-num">02</span>
+      <div class="gl-item-info">
+        <div class="gl-item-tags"><span>Web</span><span>Landing</span></div>
+        <h3>Unnie Box Landing</h3>
+      </div>
+      <span class="gl-item-type">UI Design</span>
+      <span class="gl-item-year">2024</span>
+      <div class="gl-item-arrow">
+        <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 17L17 7M17 7H7M17 7v10"/>
+        </svg>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
 <footer class="site-footer">
   <div class="site-footer__inner">
     <div class="site-footer__col site-footer__col--brand">
@@ -106,7 +185,7 @@
     </div>
     <div class="site-footer__col">
       <p class="site-footer__col-title">Contact</p>
-      <div class="site-footer__item">din.design.studio@gmail.com</div>
+      <div class="site-footer__item">din.design.world@gmail.com</div>
       <div class="site-footer__item">Canada</div>
     </div>
     <div class="site-footer__col">

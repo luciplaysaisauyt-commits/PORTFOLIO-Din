@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="/assets/css/clm.css">
 
   <script src="/assets/js/main.js" defer></script>
-  <script src="/assets/js/clm.js" defer></script>
 </head>
 
 <body>
@@ -35,6 +34,7 @@
         { id: "before-after", label: "Before/After" },
         { id: "process", label: "Process" },
         { id: "colors", label: "Design System" },
+        { id: "uikit", label: "UI Kit" },
         { id: "screens", label: "Screens" },
         { id: "admin", label: "Admin" },
         { id: "learnings", label: "Learnings" }
@@ -44,35 +44,31 @@
     <%- include("../partials/caseSubnav", { subnavItems }) %>
 
     <main>
-      <!-- твой контент дальше как был -->
+      <div class="case-wrap">
 
-  <main>
-    <div class="case-wrap">
-
-      <div class="hero" data-reveal>
-        <div>
-          <div class="hero-accent"></div>
-          <div class="eyebrow">UI / UX Redesign · Case Study · Real Client Project</div>
-          <h1 class="case-title">CLM Mafia Platform</h1>
-          <p class="case-sub">Full redesign of a competitive Mafia game platform — ratings, tournaments, clubs, and game tracking. From a cluttered legacy interface to a modern product used by real players.</p>
-          <div class="btn-row">
-            <a class="btn primary" href="/gallery">← Back to gallery</a>
-            <a class="btn" href="/contact">Get in touch</a>
+        <div class="hero" data-reveal>
+          <div>
+            <div class="hero-accent"></div>
+            <div class="eyebrow">UI / UX Redesign &nbsp;·&nbsp; Case Study &nbsp;·&nbsp; Real Client Project</div>
+            <h1 class="case-title">CLM Mafia<br>Platform</h1>
+            <p class="case-sub">Full redesign of a competitive Mafia game platform — ratings, tournaments, clubs, and game tracking. From a cluttered legacy interface to a modern product used by real players.</p>
+            <div class="btn-row">
+              <a class="btn primary" href="/gallery">← Back to gallery</a>
+              <a class="btn" href="/contact">Get in touch</a>
+            </div>
+            <div class="case-meta" style="margin-top:22px">
+              <div class="meta-card"><div class="meta-k">Role</div><div class="meta-v">UI / UX Designer</div></div>
+              <div class="meta-card"><div class="meta-k">Tools</div><div class="meta-v"><span class="chip">Figma</span><span class="chip">Adobe Illustrator</span></div></div>
+              <div class="meta-card"><div class="meta-k">Type</div><div class="meta-v">Real client project · Full redesign</div></div>
+              <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">20+ screens · UI system · Components</div></div>
+            </div>
           </div>
-          <div class="case-meta" style="margin-top:22px">
-            <div class="meta-card"><div class="meta-k">Role</div><div class="meta-v">UI / UX Designer</div></div>
-            <div class="meta-card"><div class="meta-k">Tools</div><div class="meta-v"><span class="chip">Figma</span><span class="chip">Adobe Illustrator</span></div></div>
-            <div class="meta-card"><div class="meta-k">Type</div><div class="meta-v">Real client project · Full redesign</div></div>
-            <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">14+ screens · UI system · Components</div></div>
+          <div class="hero-img-wrap" data-reveal data-reveal-delay="2">
+            <img src="/images/clm/Main page home.webp" alt="CLM Main Page" loading="lazy" decoding="async">
+            <div class="hero-overlay"></div>
+            <span class="hero-badge">Mafia Platform</span>
           </div>
         </div>
-        <div class="hero-img-wrap" data-reveal data-reveal-delay="2" onclick="openLightbox('Main_page_Original.png')">
-          <img src="/images/clm/Main_page_Original.png" alt="CLM Main Page">
-          <div class="hero-overlay"></div>
-          <span class="hero-badge">Mafia Platform</span>
-        </div>
-      </div>
-
 
         <div class="case-sections">
 
@@ -82,7 +78,7 @@
             <p class="case-p">CLM is a real platform for tracking player ratings, running tournaments, managing clubs, and recording game sessions for the board game Mafia. The platform had been running for years on an outdated interface — functional but visually overwhelming and painful to use.</p>
             <p class="case-p" style="margin-top:10px">This was a real paid client project. My goal: redesign the entire product, simplify navigation, establish a strong dark + red visual identity, and build a scalable UI component system. Every screen was designed with the real user in mind — from a first-time visitor to a competitive club owner managing tournaments.</p>
             <div class="stats-grid" style="margin-top:26px">
-              <div class="stat" data-reveal data-reveal-delay="1"><div class="stat-n">14+</div><div class="stat-t">Unique screens designed</div></div>
+              <div class="stat" data-reveal data-reveal-delay="1"><div class="stat-n">20+</div><div class="stat-t">Unique screens designed</div></div>
               <div class="stat" data-reveal data-reveal-delay="2"><div class="stat-n">100%</div><div class="stat-t">Custom UI system from scratch</div></div>
               <div class="stat" data-reveal data-reveal-delay="3"><div class="stat-n">Real</div><div class="stat-t">Live client project with real users</div></div>
             </div>
@@ -107,12 +103,12 @@
             <h2 class="case-h2">Before and after.</h2>
             <p class="case-p">The old MafiaRatings interface versus the new CLM redesign — same platform, completely different experience. The old site was built on Windows-era desktop software aesthetics. The new design brings it into 2025.</p>
             <div class="ba-grid">
-              <div class="ba-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Group_59.png')">
-                <img src="/images/clm/Group_59.png" alt="Old MafiaRatings interface">
+              <div class="ba-card" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/clm/main_pAGE_OLD_MAFIA.webp" alt="Old MafiaRatings interface" loading="lazy" decoding="async">
                 <span class="ba-tag before">Before — MafiaRatings</span>
               </div>
-              <div class="ba-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Main_page_Original.png')">
-                <img src="/images/clm/Main_page_Original.png" alt="New CLM design">
+              <div class="ba-card" data-reveal data-reveal-delay="2">
+                <img src="/images/clm/Main page home.webp" alt="New CLM design" loading="lazy" decoding="async">
                 <span class="ba-tag after">After — CLM Redesign</span>
               </div>
             </div>
@@ -169,65 +165,99 @@
             </div>
           </section>
 
+          <section class="case-section" id="uikit" data-reveal>
+            <div class="eyebrow">Component Library</div>
+            <h2 class="case-h2">UI Kit.</h2>
+            <p class="case-p">A complete, reusable component system built from scratch — buttons, cards, tables, badges, form elements, navigation patterns, and data displays. Every component designed for dark backgrounds with the platform's red accent palette. Handed off with full Figma documentation.</p>
+            <div class="screens-grid" style="margin-top:20px">
+              <div class="screen-card full" data-reveal data-reveal-delay="1">
+                <span class="screen-tag">UI Kit — Full System Overview</span>
+                <img src="/images/clm/UI KIT.webp" alt="CLM UI Kit" loading="lazy" decoding="async">
+              </div>
+              <div class="screen-card" data-reveal data-reveal-delay="1">
+                <span class="screen-tag">Player Profile</span>
+                <img src="/images/clm/Player.webp" alt="Player Profile" loading="lazy" decoding="async">
+              </div>
+              <div class="screen-card" data-reveal data-reveal-delay="2">
+                <span class="screen-tag">Ratings — Alternative View</span>
+                <img src="/images/clm/RAtings.webp" alt="Ratings Alternative" loading="lazy" decoding="async">
+              </div>
+            </div>
+          </section>
+
           <section class="case-section" id="screens" data-reveal>
             <div class="eyebrow">Full Platform Design</div>
             <h2 class="case-h2">All screens.</h2>
             <p class="case-p">Every page of the platform redesigned — from the homepage with live rankings to individual club profiles, tournament listings, game tracking, player profiles, and the Hall of Fame.</p>
 
             <div class="screens-grid" style="margin-top:20px">
-              <div class="screen-card full" data-reveal data-reveal-delay="1" onclick="openLightbox('Main_page_Original.png')">
+              <div class="screen-card full" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Homepage — Rankings & Tournaments</span>
-                <img src="/images/clm/Main_page_Original.png" alt="CLM Homepage">
+                <img src="/images/clm/Main page home.webp" alt="CLM Homepage" loading="lazy" decoding="async">
               </div>
 
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Рейтинг.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Global Ratings Page</span>
-                <img src="/images/clm/Рейтинг.png" alt="Ratings">
+                <img src="/images/clm/RATING.webp" alt="Ratings" loading="lazy" decoding="async">
               </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Clubs.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="2">
                 <span class="screen-tag">Clubs List</span>
-                <img src="/images/clm/Clubs.png" alt="Clubs List">
+                <img src="/images/clm/Clubs.webp" alt="Clubs List" loading="lazy" decoding="async">
               </div>
 
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Clubs_for_Player__Owner_of_club-2.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Club Page — Visitor View</span>
-                <img src="/images/clm/Clubs_for_Player__Owner_of_club-2.png" alt="Club Visitor">
+                <img src="/images/clm/Clubs for Player Owner of club-2.webp" alt="Club Visitor" loading="lazy" decoding="async">
               </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Clubs_for_Player__Owner_of_club.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="2">
                 <span class="screen-tag">Club Page — Member View</span>
-                <img src="/images/clm/Clubs_for_Player__Owner_of_club.png" alt="Club Member">
+                <img src="/images/clm/Clubs for Player Owner of club.webp" alt="Club Member" loading="lazy" decoding="async">
               </div>
 
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Clubs_for_Player__Owner_of_club-1.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Player Profile — With Club</span>
-                <img src="/images/clm/Clubs_for_Player__Owner_of_club-1.png" alt="Player Profile">
+                <img src="/images/clm/Clubs for Player Owner of club-1.webp" alt="Player Profile" loading="lazy" decoding="async">
               </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Tournament.png')">
-                <span class="screen-tag">Tournaments</span>
-                <img src="/images/clm/Tournament.png" alt="Tournaments">
+              <div class="screen-card" data-reveal data-reveal-delay="2">
+                <span class="screen-tag">Tournaments — Version 1</span>
+                <img src="/images/clm/Tournament 1 version.webp" alt="Tournaments V1" loading="lazy" decoding="async">
               </div>
 
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Зал_Славы.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="1">
+                <span class="screen-tag">Tournaments — Version 2</span>
+                <img src="/images/clm/Tournament 2 version.webp" alt="Tournaments V2" loading="lazy" decoding="async">
+              </div>
+              <div class="screen-card" data-reveal data-reveal-delay="2">
+                <span class="screen-tag">Start Game</span>
+                <img src="/assets/images/clm/Start_game.webp" alt="Start Game" loading="lazy" decoding="async">
+              </div>
+
+              <div class="screen-card" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Hall of Fame</span>
-                <img src="/images/clm/Зал_Славы.png" alt="Hall of Fame">
+                <img src="/images/clm/Зал славвы.webp" alt="Hall of Fame" loading="lazy" decoding="async">
               </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Анкета.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="2">
+                <span class="screen-tag">Hall of Fame — Roman Slavi Edition</span>
+                <img src="/images/clm/Зал Славы(Rom slavi).webp" alt="Hall of Fame Alt" loading="lazy" decoding="async">
+              </div>
+
+              <div class="screen-card" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Player Questionnaire / Profile</span>
-                <img src="/images/clm/Анкета.png" alt="Player Profile">
+                <img src="/images/clm/Анкета.webp" alt="Player Profile" loading="lazy" decoding="async">
               </div>
-
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Frame.png')">
+              <div class="screen-card" data-reveal data-reveal-delay="2">
                 <span class="screen-tag">Live Game Interface</span>
-                <img src="/images/clm/Frame.png" alt="Game Interface">
-              </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Frame-1.png')">
-                <span class="screen-tag">OBS Studio Integration</span>
-                <img src="/images/clm/Frame-1.png" alt="OBS Integration">
+                <img src="/images/clm/Frame.webp" alt="Game Interface" loading="lazy" decoding="async">
               </div>
 
-              <div class="screen-card full" data-reveal data-reveal-delay="1" onclick="openLightbox('Rules_and_etc.png')">
+              <div class="screen-card full" data-reveal data-reveal-delay="1">
+                <span class="screen-tag">OBS Studio Integration</span>
+                <img src="/images/clm/OBS.webp" alt="OBS Integration" loading="lazy" decoding="async">
+              </div>
+
+              <div class="screen-card full" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Rules & Platform Information</span>
-                <img src="/images/clm/Rules_and_etc.png" alt="Rules">
+                <img src="/images/clm/Rules and etc.webp" alt="Rules" loading="lazy" decoding="async">
               </div>
             </div>
           </section>
@@ -237,17 +267,13 @@
             <h2 class="case-h2">Admin panel.</h2>
             <p class="case-p">The platform serves multiple user roles — players, judges, club owners, and admins. The admin panel was designed with full user management: role assignment, status control, blocking, and moderation tools. Two design iterations were created and presented to the client.</p>
             <div class="screens-grid" style="margin-top:18px">
-              <div class="screen-card full" data-reveal data-reveal-delay="1" onclick="openLightbox('Admin.png')">
+              <div class="screen-card full" data-reveal data-reveal-delay="1">
                 <span class="screen-tag">Admin — User Management (Final)</span>
-                <img src="/images/clm/Admin.png" alt="Admin Panel Final">
+                <img src="/images/clm/Admin.webp" alt="Admin Panel Final" loading="lazy" decoding="async">
               </div>
-              <div class="screen-card" data-reveal data-reveal-delay="1" onclick="openLightbox('Admin-1.png')">
-                <span class="screen-tag">Admin — Iteration 1</span>
-                <img src="/images/clm/Admin-1.png" alt="Admin v1">
-              </div>
-              <div class="screen-card" data-reveal data-reveal-delay="2" onclick="openLightbox('Admin-2.png')">
-                <span class="screen-tag">Admin — Iteration 2</span>
-                <img src="/images/clm/Admin-2.png" alt="Admin v2">
+              <div class="screen-card full" data-reveal data-reveal-delay="2">
+                <span class="screen-tag">old mafia website — Legacy Reference</span>
+                <img src="/images/clm/old mafia website.webp" alt="Old Mafia Website" loading="lazy" decoding="async">
               </div>
             </div>
           </section>
@@ -292,4 +318,75 @@
       </div>
     </div>
   </main>
-<%- include("../partials/caseFooter", { nav, caseName: "CLM Mafia Platform", theme: "clm" }) %>
+
+  <%- include("../partials/caseFooter", { nav, caseName: "CLM Mafia Platform", theme: "clm" }) %>
+
+<!-- LIGHTBOX -->
+<div class="img-modal" id="imgModal" aria-hidden="true">
+  <div class="img-modal-backdrop" data-close></div>
+  <div class="img-modal-card" role="dialog" aria-modal="true">
+    <button class="img-modal-close" type="button" data-close>✕</button>
+    <img id="imgModalSrc" src="" alt="Preview">
+  </div>
+</div>
+
+<script>
+  /* SCROLL PROGRESS */
+  const progressBar = document.getElementById('progressBar');
+  if (progressBar) {
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = (window.scrollY / total * 100) + '%';
+    }, { passive: true });
+  }
+
+  /* SCROLL REVEAL */
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
+
+  /* SUBNAV ACTIVE */
+  const subnavLinks = document.querySelectorAll('.case-subnav-pill a');
+  const secObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.id;
+      subnavLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+    });
+  }, { threshold: 0.22 });
+  document.querySelectorAll('.case-section[id]').forEach(s => secObs.observe(s));
+
+  /* LIGHTBOX */
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('imgModalSrc');
+
+  function openModal(src) {
+    modalImg.src = src;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+  }
+
+  /* Auto-bind all screen/ba/hero images */
+  document.querySelectorAll('.screen-card img, .ba-card img, .hero-img-wrap img, .uikit-img img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.addEventListener('click', () => openModal(img.src));
+  });
+
+  modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll');
+  }));
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+    }
+  });
+</script>
+</body>
+</html>
