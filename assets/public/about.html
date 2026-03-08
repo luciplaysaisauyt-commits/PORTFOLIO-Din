@@ -16,7 +16,6 @@
 <div class="din-cursor" id="dinCursor"></div>
 <div class="din-cursor-ring" id="dinCursorRing"></div>
 
-
 <div id="header-placeholder"></div>
 
 <section class="about-hero">
@@ -70,20 +69,48 @@
   </div>
 </section>
 
+<!-- ===== REDESIGNED CTA ===== -->
 <section class="about-cta">
-  <small>That's all for now.</small>
-  <h2>Got a project in mind?</h2>
-  <h3>Let's talk</h3>
-  <div class="cta-grid">
-    <div>
-      <div class="cta-field"><label>Email</label><p>din.design.world@gmail.com</p></div>
-      <div class="cta-field"><label>Location</label><p>Canada</p></div>
+  <div class="cta-bg-text" aria-hidden="true">Let's<br>talk</div>
+
+  <div class="cta-inner">
+
+    <div class="cta-top">
+      <span class="cta-eyebrow"><span class="cta-line"></span>That's all for now</span>
+      <h2 class="cta-heading">
+        Got a project<br>
+        <em>in mind?</em>
+      </h2>
     </div>
-    <div class="cta-btn-wrap">
-      <button class="cta-btn" onclick="window.location='contactus.html'">Get in touch</button>
+
+    <div class="cta-bottom">
+      <div class="cta-info">
+        <div class="cta-row">
+          <span class="cta-label">Email</span>
+          <a href="mailto:din.design.world@gmail.com" class="cta-value">din.design.world@gmail.com</a>
+        </div>
+        <div class="cta-row">
+          <span class="cta-label">Location</span>
+          <span class="cta-value">Canada</span>
+        </div>
+        <div class="cta-row">
+          <span class="cta-label">Status</span>
+          <span class="cta-value cta-value--green"><span class="cta-dot"></span>Available for work</span>
+        </div>
+      </div>
+
+      <div class="cta-action">
+        <button class="cta-circle-btn" onclick="window.location='contactus.html'" aria-label="Get in touch">
+          <span class="cta-circle-text">Get in<br>touch</span>
+          <svg class="cta-circle-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </button>
+        <p class="cta-hint">↑ Click to start a conversation</p>
+      </div>
     </div>
+
   </div>
 </section>
+<!-- ===== END CTA ===== -->
 
 <footer class="site-footer">
   <div class="site-footer__inner">
@@ -94,12 +121,10 @@
   </div>
   <div class="site-footer__bottom"><span>© 2025 DIN. All rights reserved.</span><span>Designed &amp; built with care</span></div>
 </footer>
+
 <script src="/assets/js/main.js" defer></script>
 <script src="/assets/js/index.js" defer></script>
-
 <audio id="bgMusic" src="/assets/music/muzyka-ochen-krasivaya-pianino.mp3" loop></audio>
 <button id="musicBtn" class="music-btn" title="Toggle music">🎵</button>
-
-
 </body>
 </html>

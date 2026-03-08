@@ -12,8 +12,8 @@
   --border:     rgba(255,255,255,0.07);
   --border-h:   rgba(255,255,255,0.18);
   --text:       #f0ece4;
-  --text-muted: #6b6b6b;
-  --text-dim:   #999;
+  --text-muted: rgba(255,255,255,0.58); /* FIXED: было #6b6b6b */
+  --text-dim:   rgba(255,255,255,0.42); /* FIXED: было #999    */
   --accent:     #c8a96e;
   --accent-2:   #b8935a;
   --white:      #fafafa;
@@ -399,8 +399,6 @@ body::before {
 .img-modal { display: none; }
 .img-modal.open { display: block; }
 
-
-
 .music-btn {
   position: fixed;
   bottom: 24px;
@@ -419,7 +417,6 @@ body::before {
 }
 .music-btn:hover { transform: scale(1.1); }
 .music-btn.playing { border-color: rgba(255,255,255,0.5); }
-
 
 /* ── GLOBAL INPUT VISIBILITY ── */
 input::placeholder, textarea::placeholder {
