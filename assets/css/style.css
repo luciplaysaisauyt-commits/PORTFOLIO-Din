@@ -600,60 +600,30 @@ input, textarea { border-bottom: 1px solid rgba(255,255,255,0.25) !important; }
 .field label, label { color: rgba(255,255,255,0.7) !important; }
 .field:focus-within label { color: var(--accent) !important; text-shadow: 0 0 12px rgba(200,169,110,0.6); }
 
-/* ============================================
-   NAV MOBILE FIX — хедер всегда поверх всего
-   ============================================ */
 
-/* Хедер поверх ЛЮБОГО контента на всех размерах */
-.nav {
-  z-index: 9000 !important;
+/* Фиксированная шапка */
+#topnav.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999; /* выше модалок/фонов */
+  height: var(--navH); /* высота из переменной */
 }
 
-/* Мобильное меню ещё выше */
-.mobile-menu {
-  z-index: 9001 !important;
+/* Чтобы контент не заезжал под фикс‑хедер */
+main,
+.ps-page-wrap {
+  padding-top: calc(var(--navH) + 12px); /* 12px — небольшой зазор, по вкусу */
 }
 
-/* Страница не прячет контент под хедером */
-@media (max-width: 900px) {
-  /* Если контент начинается сразу под хедером */
-  body > *:not(.nav):not(.din-cursor):not(.din-cursor-ring):not(.mobile-menu):not(#header-placeholder):first-of-type {
-    padding-top: 0;
-  }
 
-  /* Хедер НЕ скрывается при быстром скролле на iOS */
-  .nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    -webkit-transform: translateZ(0);   /* iOS GPU layer */
-    transform: translateZ(0);
-    will-change: transform;
-    /* Убираем transition на position чтобы не было дёргания */
-    transition: background 0.3s, backdrop-filter 0.3s !important;
-  }
-}
-
-/* header-placeholder должен резервировать место под фиксированный хедер */
-#header-placeholder {
-  display: block;
+#topnav.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
   height: var(--navH);
-  flex-shrink: 0;
 }
 
-/* ============================================
-   HEADER-PLACEHOLDER HEIGHT FIX
-   Резервирует место ДО загрузки JS
-   ============================================ */
-#header-placeholder {
-  display: block;
-  height: var(--navH);        /* 130px desktop, 80px mobile */
-  flex-shrink: 0;
-  pointer-events: none;
-}
-
-/* Когда хедер загружен — placeholder схлопывается */
-#header-placeholder:not(:empty) {
-  height: 0;
+main,
+.ps-page-wrap {
+  padding-top: calc(var(--navH) + 12px);
 }
