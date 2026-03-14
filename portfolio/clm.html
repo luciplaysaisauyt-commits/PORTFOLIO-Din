@@ -7,18 +7,14 @@
   <title>DIN – CLM Mafia Platform Case Study</title>
   <link rel="icon" type="image/png" href="/assets/images/DIN.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/clm.css">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One">
-  
+  <link rel="stylesheet" href="/assets/css/project-frames.css">
 </head>
-<body>
+
+<body class="theme-clm">
+
+  <!-- BG -->
   <div class="bg-layer"></div>
   <div class="bg-grid"></div>
   <div class="orb orb-1"></div>
@@ -27,6 +23,8 @@
   <div class="progress-bar" id="progressBar"></div>
 
   <div class="page-wrap">
+
+    <!-- NAV -->
     <header class="nav" id="topnav">
       <div class="logo"><a href="../index.html"><img src="/assets/images/DIN.png" alt="DIN" class="logo-img"></a></div>
       <button class="burger" id="burger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
@@ -37,10 +35,11 @@
         <a href="../contact.html">Contact</a>
       </nav>
     </header>
+
+    <!-- MOBILE MENU -->
     <nav class="mobile-menu" id="mobileMenu">
       <div class="mobile-menu-panel">
         <div class="mobile-menu-top">
-          <div class="mobile-logo" aria-hidden="true"></div>
           <button class="mobile-close" id="mobileClose" type="button">&times;</button>
         </div>
         <div class="mobile-menu-links">
@@ -52,28 +51,27 @@
       </div>
     </nav>
 
-
-    
+    <!-- SUBNAV -->
     <div class="case-subnav" data-case-subnav>
       <div class="case-subnav-inner">
         <div class="case-subnav-pill" role="navigation" aria-label="Case sections">
-          <a href="#overview" class="case-subnav-link">Overview</a>
-          <a href="#problem" class="case-subnav-link">Problem</a>
+          <a href="#overview"     class="case-subnav-link">Overview</a>
+          <a href="#problem"      class="case-subnav-link">Problem</a>
           <a href="#before-after" class="case-subnav-link">Before/After</a>
-          <a href="#process" class="case-subnav-link">Process</a>
-          <a href="#colors" class="case-subnav-link">Design System</a>
-          <a href="#uikit" class="case-subnav-link">UI Kit</a>
-          <a href="#screens" class="case-subnav-link">Screens</a>
-          <a href="#admin" class="case-subnav-link">Admin</a>
-          <a href="#learnings" class="case-subnav-link">Learnings</a>
+          <a href="#process"      class="case-subnav-link">Process</a>
+          <a href="#colors"       class="case-subnav-link">Design System</a>
+          <a href="#uikit"        class="case-subnav-link">UI Kit</a>
+          <a href="#screens"      class="case-subnav-link">Screens</a>
+          <a href="#admin"        class="case-subnav-link">Admin</a>
+          <a href="#learnings"    class="case-subnav-link">Learnings</a>
         </div>
       </div>
     </div>
 
-
-
     <main>
       <div class="case-wrap">
+
+        <!-- HERO -->
         <div class="hero" data-reveal>
           <div>
             <div class="hero-accent"></div>
@@ -83,8 +81,8 @@
             <div class="btn-row">
               <a class="btn primary" href="../gallery.html">← Back to gallery</a>
               <a class="btn" href="../contactus.html">Get in touch</a>
-              <a class="btn" href="unnie-box.html">Next →</a>
-              
+              <a class="btn" href="unnie-box.html">← Prev</a>
+              <a class="btn" href="mschf.html">Next →</a>
             </div>
             <div class="case-meta" style="margin-top:22px">
               <div class="meta-card"><div class="meta-k">Role</div><div class="meta-v">UI / UX Designer</div></div>
@@ -93,14 +91,18 @@
               <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">20+ screens · UI system · Components</div></div>
             </div>
           </div>
-          <div class="hero-img-wrap" data-reveal data-reveal-delay="2">
+
+          <!-- HERO IMAGE -->
+          <div class="pf" style="border-radius:24px;border-color:rgba(255,60,60,0.28)" data-reveal data-reveal-delay="2">
             <img src="/assets/images/clm/Main_page_home.webp" alt="CLM Main Page" loading="lazy" decoding="async">
-            <div class="hero-overlay"></div>
-            <span class="hero-badge">Mafia Platform</span>
+            <div class="pf__overlay"></div>
+            <span class="pf__badge">Mafia Platform</span>
           </div>
         </div>
 
         <div class="case-sections">
+
+          <!-- OVERVIEW -->
           <section class="case-section" id="overview" data-reveal>
             <div class="eyebrow">Project Overview</div>
             <h2 class="case-h2">CLM — the competitive Mafia hub.</h2>
@@ -113,6 +115,7 @@
             </div>
           </section>
 
+          <!-- PROBLEM -->
           <section class="case-section" id="problem" data-reveal>
             <h2 class="case-h2">Problem and goals</h2>
             <div class="grid2">
@@ -121,16 +124,26 @@
             </div>
           </section>
 
+          <!-- BEFORE / AFTER -->
           <section class="case-section" id="before-after" data-reveal>
             <div class="eyebrow">Transformation</div>
             <h2 class="case-h2">Before and after.</h2>
             <p class="case-p">The old MafiaRatings interface versus the new CLM redesign — same platform, completely different experience.</p>
-            <div class="ba-grid">
-              <div class="ba-card" data-reveal data-reveal-delay="1"><img src="/assets/images/clm/main_pAGE_OLD_MAFIA.webp" alt="Old MafiaRatings interface" loading="lazy" decoding="async"><span class="ba-tag before">Before — MafiaRatings</span></div>
-              <div class="ba-card" data-reveal data-reveal-delay="2"><img src="/assets/images/clm/Main_page_home.webp" alt="New CLM design" loading="lazy" decoding="async"><span class="ba-tag after">After — CLM Redesign</span></div>
+
+            <!-- Оба десктоп — одинаковая пропорция 16:10 -->
+            <div class="pf-grid--ba" style="margin-top:20px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/clm/main_pAGE_OLD_MAFIA.webp" alt="Old MafiaRatings interface" loading="lazy" decoding="async">
+                <span class="pf__tag pf__tag--before">Before — MafiaRatings</span>
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <img src="/assets/images/clm/Main_page_home.webp" alt="New CLM design" loading="lazy" decoding="async">
+                <span class="pf__tag pf__tag--after">After — CLM Redesign</span>
+              </div>
             </div>
           </section>
 
+          <!-- PROCESS -->
           <section class="case-section" id="process" data-reveal>
             <h2 class="case-h2">Design process</h2>
             <p class="case-p">I followed a structured approach — starting from user flows and information architecture before touching any visual design.</p>
@@ -142,6 +155,7 @@
             </div>
           </section>
 
+          <!-- COLORS -->
           <section class="case-section" id="colors" data-reveal>
             <h2 class="case-h2">Colors and typography</h2>
             <p class="case-p">A bold dark theme with aggressive red accents — matching the competitive, strategic nature of Mafia.</p>
@@ -158,45 +172,118 @@
             </div>
           </section>
 
+          <!-- UI KIT -->
           <section class="case-section" id="uikit" data-reveal>
             <div class="eyebrow">Component Library</div>
             <h2 class="case-h2">UI Kit</h2>
             <p class="case-p">A complete, reusable component system built from scratch — buttons, cards, tables, badges, form elements, navigation patterns, and data displays.</p>
-            <div class="screens-grid" style="margin-top:20px">
-              <div class="screen-card full" data-reveal data-reveal-delay="1"><span class="screen-tag">UI Kit — Full System Overview</span><img src="/assets/images/clm/UI_KIT.webp" alt="CLM UI Kit" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="1"><span class="screen-tag">Player Profile</span><img src="/assets/images/clm/Player.webp" alt="Player Profile" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="2"><span class="screen-tag">Ratings — Alternative View</span><img src="/assets/images/clm/RAtings.webp" alt="Ratings Alternative" loading="lazy" decoding="async"></div>
+
+            <!-- UI Kit — полная ширина, без обрезки -->
+            <div class="pf pf--uikit" style="margin-top:20px;border:2px solid rgba(255,60,60,0.30);box-shadow:0 0 60px rgba(255,60,60,0.08)" data-reveal data-reveal-delay="1">
+              <span class="pf__tag">UI Kit — Full System Overview</span>
+              <img src="/assets/images/clm/UI_KIT.webp" alt="CLM UI Kit" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Player + Ratings рядом -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Player Profile</span>
+                <img src="/assets/images/clm/Player.webp" alt="Player Profile" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Ratings — Alternative View</span>
+                <img src="/assets/images/clm/RAtings.webp" alt="Ratings Alternative" loading="lazy" decoding="async">
+              </div>
             </div>
           </section>
 
+          <!-- SCREENS -->
           <section class="case-section" id="screens" data-reveal>
             <div class="eyebrow">Full Platform Design</div>
             <h2 class="case-h2">All screens.</h2>
             <p class="case-p">Every page of the platform redesigned — from the homepage with live rankings to individual club profiles, tournament listings, game tracking, player profiles, and the Hall of Fame.</p>
-            <div class="screens-grid" style="margin-top:20px">
-              <div class="screen-card full" data-reveal data-reveal-delay="1"><span class="screen-tag">Homepage — Rankings & Tournaments</span><img src="/assets/images/clm/Main_page_home.webp" alt="CLM Homepage" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="1"><span class="screen-tag">Global Ratings Page</span><img src="/assets/images/clm/RATING.webp" alt="Ratings" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="2"><span class="screen-tag">Clubs List</span><img src="/assets/images/clm/Clubs.webp" alt="Clubs List" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="1"><span class="screen-tag">Club Page — Visitor View</span><img src="/assets/images/clm/Clubs_for_Player_Owner_of_club-2.webp" alt="Club Visitor" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="2"><span class="screen-tag">Club Page — Member View</span><img src="/assets/images/clm/Clubs_for_Player_Owner_of_club.webp" alt="Club Member" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="1"><span class="screen-tag">Tournaments — Version 1</span><img src="/assets/images/clm/Tournament_1_version.webp" alt="Tournaments V1" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="2"><span class="screen-tag">Tournaments — Version 2</span><img src="/assets/images/clm/Tournament_2_version.webp" alt="Tournaments V2" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="1"><span class="screen-tag">Hall of Fame</span><img src="/assets/images/clm/Зал_славвы.webp" alt="Hall of Fame" loading="lazy" decoding="async"></div>
-              <div class="screen-card" data-reveal data-reveal-delay="2"><span class="screen-tag">Live Game Interface</span><img src="/assets/images/clm/Frame.webp" alt="Game Interface" loading="lazy" decoding="async"></div>
-              <div class="screen-card full" data-reveal data-reveal-delay="1"><span class="screen-tag">Rules & Platform Information</span><img src="/assets/images/clm/Rules_and_etc.webp" alt="Rules" loading="lazy" decoding="async"></div>
+
+            <!-- Homepage — полная ширина -->
+            <div class="pf pf--full pf--desktop" style="margin-top:20px" data-reveal data-reveal-delay="1">
+              <span class="pf__tag">Homepage — Rankings & Tournaments</span>
+              <img src="/assets/images/clm/Main_page_home.webp" alt="CLM Homepage" loading="lazy" decoding="async">
+            </div>
+
+            <!-- Ratings + Clubs -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Global Ratings Page</span>
+                <img src="/assets/images/clm/RATING.webp" alt="Ratings" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Clubs List</span>
+                <img src="/assets/images/clm/Clubs.webp" alt="Clubs List" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Club views -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Club Page — Visitor View</span>
+                <img src="/assets/images/clm/Clubs_for_Player_Owner_of_club-2.webp" alt="Club Visitor" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Club Page — Member View</span>
+                <img src="/assets/images/clm/Clubs_for_Player_Owner_of_club.webp" alt="Club Member" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Tournaments -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Tournaments — Version 1</span>
+                <img src="/assets/images/clm/Tournament_1_version.webp" alt="Tournaments V1" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Tournaments — Version 2</span>
+                <img src="/assets/images/clm/Tournament_2_version.webp" alt="Tournaments V2" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Hall of Fame + Live Game -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Hall of Fame</span>
+                <img src="/assets/images/clm/Зал_славвы.webp" alt="Hall of Fame" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Live Game Interface</span>
+                <img src="/assets/images/clm/Frame.webp" alt="Game Interface" loading="lazy" decoding="async">
+              </div>
+            </div>
+
+            <!-- Rules — полная ширина -->
+            <div class="pf pf--full pf--desktop" style="margin-top:16px" data-reveal data-reveal-delay="1">
+              <span class="pf__tag">Rules & Platform Information</span>
+              <img src="/assets/images/clm/Rules_and_etc.webp" alt="Rules" loading="lazy" decoding="async">
             </div>
           </section>
 
+          <!-- ADMIN -->
           <section class="case-section" id="admin" data-reveal>
             <div class="eyebrow">Role-Based Design</div>
             <h2 class="case-h2">Admin panel</h2>
             <p class="case-p">The platform serves multiple user roles — players, judges, club owners, and admins. The admin panel was designed with full user management.</p>
-            <div class="screens-grid" style="margin-top:18px">
-              <div class="screen-card full" data-reveal data-reveal-delay="1"><span class="screen-tag">Admin — User Management (Final)</span><img src="/assets/images/clm/Admin.webp" alt="Admin Panel Final" loading="lazy" decoding="async"></div>
-              <div class="screen-card full" data-reveal data-reveal-delay="2"><span class="screen-tag">Legacy Reference</span><img src="/assets/images/clm/old_mafia_website.webp" alt="Old Mafia Website" loading="lazy" decoding="async"></div>
+
+            <!-- Admin + Legacy рядом -->
+            <div class="pf-grid" style="margin-top:18px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Admin — User Management (Final)</span>
+                <img src="/assets/images/clm/Admin.webp" alt="Admin Panel Final" loading="lazy" decoding="async">
+              </div>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag pf__tag--before">Legacy Reference</span>
+                <img src="/assets/images/clm/old_mafia_website.webp" alt="Old Mafia Website" loading="lazy" decoding="async">
+              </div>
             </div>
           </section>
 
+          <!-- LEARNINGS -->
           <section class="case-section" id="learnings" data-reveal>
             <div class="eyebrow">Key Learnings</div>
             <h2 class="case-h2">What I learned.</h2>
@@ -215,19 +302,23 @@
               </div>
             </div>
           </section>
+
         </div>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="case-footer case-footer--clm">
       <div class="case-footer__inner">
         <div class="case-footer__brand"><img src="/assets/images/DIN.png" alt="DIN Logo" class="case-footer__logo"><p class="case-footer__tagline">Creative designer crafting digital experiences that matter.</p></div>
         <div class="case-footer__col"><p class="case-footer__title">Navigation</p><nav class="case-footer__nav"><a href="../index.html">Home</a><a href="../gallery.html">Gallery</a><a href="../about.html">About</a><a href="../contact.html">Contact</a></nav></div>
         <div class="case-footer__col"><p class="case-footer__title">Contact</p><div class="case-footer__item">din.design.world@gmail.com</div><div class="case-footer__item">Canada</div></div>
-        <div class="case-footer__col"><p class="case-footer__title">Newsletter</p><p class="case-footer__hint">Stay updated with new projects.</p><form class="case-footer__form" id="newsletterForm">
-  <input type="email" id="newsletterEmail" placeholder="your@email.com">
-  <button type="submit">Subscribe</button>
-</form></div>
+        <div class="case-footer__col"><p class="case-footer__title">Newsletter</p><p class="case-footer__hint">Stay updated with new projects.</p>
+          <form class="case-footer__form" id="newsletterForm" onsubmit="return false">
+            <input type="email" id="newsletterEmail" placeholder="your@email.com">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
       <div class="case-footer__bottom">
         <span>© 2025 DIN. All rights reserved.</span>
@@ -239,22 +330,16 @@
         </div>
       </div>
     </footer>
-  </div>
 
-  <div class="img-modal" id="imgModal" aria-hidden="true">
-    <div class="img-modal-backdrop" data-close></div>
-    <div class="img-modal-card" role="dialog" aria-modal="true">
-      <button class="img-modal-close" type="button" data-close>✕</button>
-      <img id="imgModalSrc" src="" alt="Preview">
-    </div>
-  </div>
+  </div><!-- /page-wrap -->
 
-
-
-  <script src="/assets/js/main.js" defer></script>
-  <script src="/assets/js/clm.js" defer></script>
-
+  <!-- MUSIC -->
   <audio id="bgMusic" src="/assets/music/muzyka-ochen-krasivaya-pianino.mp3" loop></audio>
-<button id="musicBtn" class="music-btn" title="Toggle music">🎵</button>
+  <button id="musicBtn" class="music-btn" title="Toggle music">🎵</button>
+
+  <!-- SCRIPTS -->
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/project-frames.js" defer></script>
+
 </body>
 </html>

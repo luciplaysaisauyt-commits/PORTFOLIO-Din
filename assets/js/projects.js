@@ -1,19 +1,14 @@
 /* ============================================================
    projects.js — ЕДИНЫЙ источник всех проектов
-   Положи в /assets/js/projects.js
-
-   Добавляй проекты ТОЛЬКО ЗДЕСЬ — автоматически появятся:
-   ✅ Карточки на главной    (#wTrack)
-   ✅ Карточки в галерее     (#glTrack)
-   ✅ Список в галерее       (#glList)
-   ============================================================ */
+   /assets/js/projects.js
+============================================================ */
 
 const PROJECTS = [
   {
     id:       1,
     title:    "CLM\nMafia Platform",
     category: "UI UX Redesign",
-    filter:   "ui-ux",                 // совпадает с data-filter кнопок фильтра
+    filter:   "ui-ux",
     type:     "Case Study",
     year:     "2024",
     desc:     "Full redesign of Mafia platform with ratings, tournaments, clubs and admin panel.",
@@ -21,7 +16,7 @@ const PROJECTS = [
     listTags: ["UI UX", "Redesign"],
     href:     "portfolio/clm.html",
     bg:       "wbg7",
-    featured: true,                    // true = показывать на главной
+    featured: true,
   },
   {
     id:       2,
@@ -45,27 +40,26 @@ const PROJECTS = [
     type:     "UI Design",
     year:     "2024",
     desc:     "A modern furniture ecommerce platform focused on clean UI and a premium shopping experience.",
-    tags:     ["Figma", "UI Kit", "Landing", "Responsive"],
+    tags:     ["Figma", "UI Kit", "E-commerce"],
     listTags: ["Web", "E-commerce"],
     href:     "portfolio/avion.html",
     bg:       "wbg6",
     featured: true,
   },
-  // ── Новый проект — раскомментируй и заполни ───────────────
-  // {
-  //   id:       4,
-  //   title:    "Название\nПроекта",
-  //   category: "UI UX Design",
-  //   filter:   "ui-ux",        // "ui-ux" | "web" | "brand" | "dev"
-  //   type:     "Case Study",
-  //   year:     "2025",
-  //   desc:     "Описание проекта.",
-  //   tags:     ["Figma", "Tag2"],
-  //   listTags: ["UI UX"],
-  //   href:     "portfolio/my-project.html",
-  //   bg:       "wbg2",         // wbg1–wbg7
-  //   featured: true,
-  // },
+  {
+    id:       4,
+    title:    "MSCHF\nPlatform",
+    category: "UI Web Design",
+    filter:   "web",
+    type:     "UI Design",
+    year:     "2024",
+    desc:     "Full redesign concept for MSCHF — the internet's most chaotic drop-culture brand. Bold yellow/black editorial system.",
+    tags:     ["Figma", "Drop Culture", "Brand System"],
+    listTags: ["Web", "Brand"],
+    href:     "portfolio/mschf.html",
+    bg:       "wbg-mschf",
+    featured: true,
+  },
 ];
 
 
@@ -78,6 +72,7 @@ function cardHTML(p, i) {
   const num       = pad(i + 1);
   const titleHtml = p.title.replace('\n', '<br>');
   const tagsHtml  = p.tags.map(t => `<span>${t}</span>`).join('');
+
   return `
   <article class="wcard" data-href="${p.href}" data-cat="${p.filter}">
     <div class="wcard-bg ${p.bg}">
@@ -91,10 +86,10 @@ function cardHTML(p, i) {
     </div>
     <div class="wcard-veil"></div>
     <div class="wcard-num">${num}</div>
-    <div class="wcard-foot">
+    <footer class="wcard-foot">
       <div class="wcard-cat">${p.category}</div>
       <h3 class="wcard-title">${titleHtml}</h3>
-    </div>
+    </footer>
     <div class="wcard-reveal">
       <p>${p.desc}</p>
       <div class="rtags">${tagsHtml}</div>
@@ -139,7 +134,7 @@ function bindCardClicks(container) {
 
 
 /* ─────────────────────────────────────────────────────────────
-   ГЛАВНАЯ — заполняет #wTrack
+   ГЛАВНАЯ — #wTrack
 ───────────────────────────────────────────────────────────── */
 function buildHomeCards() {
   const track   = document.getElementById('wTrack');
@@ -154,7 +149,7 @@ function buildHomeCards() {
 
 
 /* ─────────────────────────────────────────────────────────────
-   ГАЛЕРЕЯ — заполняет #glTrack + #glList + счётчики
+   ГАЛЕРЕЯ — #glTrack + #glList
 ───────────────────────────────────────────────────────────── */
 function buildGallery() {
   const track   = document.getElementById('glTrack');
@@ -167,7 +162,6 @@ function buildGallery() {
     track.innerHTML = PROJECTS.map((p, i) => cardHTML(p, i)).join('');
     bindCardClicks(track);
   }
-
   if (list) {
     list.innerHTML = PROJECTS.map((p, i) => listItemHTML(p, i)).join('');
   }
@@ -181,7 +175,6 @@ function buildGallery() {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.gl-filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-
       const filter = btn.dataset.filter;
 
       if (track) {
@@ -194,7 +187,6 @@ function buildGallery() {
           item.style.display = (filter === 'all' || item.dataset.cat === filter) ? '' : 'none';
         });
       }
-
       const visible = filter === 'all'
         ? PROJECTS.length
         : PROJECTS.filter(p => p.filter === filter).length;
@@ -207,7 +199,6 @@ function buildGallery() {
 /* ─────────────────────────────────────────────────────────────
    ЗАПУСК
 ───────────────────────────────────────────────────────────── */
-/* ── Safe init: runs immediately if DOM ready, else waits ── */
 function initProjects() {
   buildHomeCards();
   buildGallery();
@@ -216,6 +207,5 @@ function initProjects() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', initProjects);
 } else {
-  // DOM already ready (e.g. script loaded after parse)
   initProjects();
 }

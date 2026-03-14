@@ -233,7 +233,7 @@
       max-width: 44ch;
       margin-bottom: 22px;
     }
-    .case-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+ 
     .btn-case {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 11px 18px; border-radius: 999px;

@@ -1,0 +1,219 @@
+/* ============================================================
+   _typography.css — ЕДИНАЯ ТИПОГРАФИКА для всего портфолио
+   Подключи этот файл ПЕРВЫМ на каждой странице
+   ============================================================ */
+
+/* ── ЛОКАЛЬНЫЕ ШРИФТЫ (одно место для всего сайта) ── */
+@font-face {
+  font-family: 'MinionPro';
+  src: url('/assets/fonts/MinionPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'MinionPro';
+  src: url('/assets/fonts/MinionPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+/* ── ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ ШРИФТОВ ── */
+:root {
+  --font-serif:   'MinionPro', Georgia, serif;         /* h1 h2 h3 h4 — заголовки */
+  --font-sans:    'Poppins', system-ui, sans-serif;    /* body, nav, кнопки, параграфы */
+  --font-mono:    'Space Mono', monospace;             /* теги, eyebrow, метаданные */
+  --font-display: 'MinionPro', Georgia, serif;         /* алиас для портфолио-файлов */
+  --font-body:    'Poppins', system-ui, sans-serif;    /* алиас для кейс-файлов */
+}
+
+/* ── BASE RESET — единые настройки для всех страниц ── */
+body {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* ── ТИПОГРАФИЧЕСКИЕ УТИЛИТЫ ── */
+
+/* Заголовок кейса */
+.case-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+}
+
+/* H2 секций */
+.case-h2 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+/* Eyebrow / теги над заголовком */
+.eyebrow,
+.t-eyebrow,
+.case-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Метаданные кейса */
+.meta-k,
+.pnum {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Теги на скринах, бейджи */
+.screen-tag,
+.ba-tag,
+.hero-badge,
+.ub-screen-tag,
+.ps-screen-tag,
+.t-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Большие цифры статистики */
+.stat-n {
+  font-family: var(--font-serif);
+  line-height: 1;
+}
+
+/* CTA баннер заголовок */
+.cta-banner h3,
+.ub-cta-banner h3,
+.ps-cta-banner h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+/* Нумерация в карточках обучения */
+.learn-n {
+  font-family: var(--font-serif);
+}
+
+/* Пример шрифта в type-карточках */
+.type-ex {
+  font-family: var(--font-serif);
+}
+
+/* Заголовок "следующего проекта" */
+.next-title,
+.pf-next-title {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 0.95;
+}
+
+/* Навигация */
+.menu a,
+.nav-menu a,
+.case-subnav-link,
+.btn,
+.btn-case,
+.case-nav__back,
+.case-nav__link {
+  font-family: var(--font-sans);
+}
+
+/* Мобильное меню */
+.mobile-menu-links a {
+  font-family: var(--font-serif);
+}
+.mobile-links a {
+  font-family: var(--font-display);
+}
+
+/* Футер */
+.site-footer__form input,
+.site-footer__form button,
+.ub-site-footer__form input,
+.ub-site-footer__form button,
+.ps-footer__form input,
+.ps-footer__form button,
+.case-footer__form input,
+.case-footer__form button {
+  font-family: var(--font-sans);
+}
+
+/* Тело параграфов кейсов */
+.case-p,
+.case-sub,
+.pdesc,
+.learn-p,
+.stat-t,
+.pf-tagline,
+.pf-step p,
+.pf-sec-content p {
+  font-family: var(--font-sans);
+  font-weight: 300;
+}
+
+/* Заголовки шагов процесса */
+.ptitle {
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
+/* Карточки кейса */
+.case-card h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+/* Карточки проектов на галерее */
+.project-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+}
+
+/* Логотип */
+.logo-text,
+.ps-footer__logo-text {
+  font-family: var(--font-serif);
+}
+
+/* ── MOBILE — 640px ── */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}

@@ -5,23 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIN – UnnieBox Case Study</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@200;300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/unniebox.css">
-  <link rel="stylesheet" href="/assets/css/portfolio.css">
   <link rel="icon" type="image/png" href="/assets/images/DIN.png">
-
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yeseva+One">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/unniebox.css">
+  <link rel="stylesheet" href="/assets/css/project-frames.css">
 </head>
-<body class="ub-body">
+
+<body class="ub-body theme-unniebox">
+
+  <!-- BG -->
   <div class="ub-bg"></div>
   <div class="ub-grid-overlay"></div>
   <div class="ub-orb ub-orb-1"></div>
@@ -29,9 +29,8 @@
   <div class="ub-orb ub-orb-3"></div>
   <div class="ub-orb ub-orb-4"></div>
   <div class="ub-progress-bar" id="ubProgress"></div>
-  <div class="din-cursor" id="dinCursor"></div>
-  <div class="din-cursor-ring" id="dinCursorRing"></div>
 
+  <!-- NAV -->
   <header class="nav" id="topnav">
     <div class="logo"><a href="../index.html"><img src="/assets/images/DIN.png" alt="DIN" class="logo-img"></a></div>
     <button class="burger" id="burger" aria-label="Menu" type="button"><span></span><span></span><span></span></button>
@@ -42,10 +41,11 @@
       <a href="../contactus.html">Contact</a>
     </nav>
   </header>
+
+  <!-- MOBILE MENU -->
   <nav class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-panel">
       <div class="mobile-menu-top">
-        <div class="mobile-logo" aria-hidden="true"></div>
         <button class="mobile-close" id="mobileClose" type="button">&times;</button>
       </div>
       <div class="mobile-menu-links">
@@ -58,18 +58,20 @@
   </nav>
 
   <div class="ub-page-wrap">
+
+    <!-- SUBNAV -->
     <div class="case-subnav" data-case-subnav>
       <div class="case-subnav-inner">
         <div class="case-subnav-pill" role="navigation" aria-label="Case sections">
-          <a href="#overview" class="case-subnav-link">Overview</a>
-          <a href="#products" class="case-subnav-link">Products</a>
-          <a href="#problem" class="case-subnav-link">Problem</a>
-          <a href="#process" class="case-subnav-link">Process</a>
-          <a href="#colors" class="case-subnav-link">Colors & Type</a>
-          <a href="#landing" class="case-subnav-link">Full Page</a>
-          <a href="#uikit" class="case-subnav-link">UI Kit</a>
-          <a href="#modals" class="case-subnav-link">Modals</a>
-          <a href="#branding" class="case-subnav-link">Branding</a>
+          <a href="#overview"  class="case-subnav-link">Overview</a>
+          <a href="#products"  class="case-subnav-link">Products</a>
+          <a href="#problem"   class="case-subnav-link">Problem</a>
+          <a href="#process"   class="case-subnav-link">Process</a>
+          <a href="#colors"    class="case-subnav-link">Colors & Type</a>
+          <a href="#landing"   class="case-subnav-link">Full Page</a>
+          <a href="#uikit"     class="case-subnav-link">UI Kit</a>
+          <a href="#modals"    class="case-subnav-link">Modals</a>
+          <a href="#branding"  class="case-subnav-link">Branding</a>
           <a href="#learnings" class="case-subnav-link">Learnings</a>
         </div>
       </div>
@@ -77,6 +79,8 @@
 
     <main class="ub-content" style="position:relative;z-index:1;color:#fff;padding-top:18px">
       <div class="case-wrap" style="padding-top:20px">
+
+        <!-- ── HERO ── -->
         <div class="case-hero" data-reveal>
           <div>
             <div class="ub-hero-accent"></div>
@@ -96,15 +100,19 @@
               <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">Screens · UI kit · Logo · Mockups</div></div>
             </div>
           </div>
-          <!-- HERO IMAGE -->
-          <div class="ub-hero-image-wrap" data-reveal data-reveal-delay="2">
+
+          <!-- HERO IMAGE — 4:3 рамка -->
+          <div class="pf" style="border-radius:24px" data-reveal data-reveal-delay="2">
             <img src="/assets/images/unniebox/UNNIBEBOX.png" alt="Korean beauty product">
-            <div class="ub-hero-overlay"></div>
-            <span class="ub-hero-badge">Korean Skincare</span>
+            <div class="pf__overlay"></div>
+            <span class="pf__badge">Korean Skincare</span>
           </div>
         </div>
 
+        <!-- ── SECTIONS ── -->
         <section class="case-sections">
+
+          <!-- OVERVIEW -->
           <section class="case-section" id="overview" data-reveal>
             <div class="case-overview-top">
               <div class="case-eyebrow">PROJECT OVERVIEW</div>
@@ -119,25 +127,42 @@
             </div>
           </section>
 
+          <!-- PRODUCTS -->
           <section class="case-section" id="products" data-reveal>
             <h2 class="case-h2">Featured products</h2>
             <p class="case-p">Each box is curated with dermatologist-tested Korean beauty products. Clean formulas, certified ingredients — zero SLS, SLES, sulfates, or artificial dyes.</p>
             <div class="ub-products-grid">
-              <!-- PRODUCT IMAGES -->
-              <div class="ub-product-card" data-reveal data-reveal-delay="1"><img src="/assets/images/unniebox/products%20for%20website.png" alt="Cleanser"><span class="ub-product-pill">Cleanser</span></div>
-              <div class="ub-product-card" data-reveal data-reveal-delay="2"><img src="/assets/images/unniebox/products%20for%20website2.png" alt="Moisturizer"><span class="ub-product-pill">Moisturizer</span></div>
-              <div class="ub-product-card" data-reveal data-reveal-delay="3"><img src="/assets/images/unniebox/products%20for%20website3.png" alt="SPF 50+"><span class="ub-product-pill">SPF 50+</span></div>
+              <div class="ub-product-card" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/unniebox/products%20for%20website.png" alt="Cleanser">
+                <span class="ub-product-pill">Cleanser</span>
+              </div>
+              <div class="ub-product-card" data-reveal data-reveal-delay="2">
+                <img src="/assets/images/unniebox/products%20for%20website2.png" alt="Moisturizer">
+                <span class="ub-product-pill">Moisturizer</span>
+              </div>
+              <div class="ub-product-card" data-reveal data-reveal-delay="3">
+                <img src="/assets/images/unniebox/products%20for%20website3.png" alt="SPF 50+">
+                <span class="ub-product-pill">SPF 50+</span>
+              </div>
             </div>
           </section>
 
+          <!-- PROBLEM -->
           <section class="case-section" id="problem" data-reveal>
             <h2 class="case-h2">Problem and goals</h2>
             <div class="case-grid2">
-              <div class="case-card" data-reveal data-reveal-delay="1"><h3>Problem</h3><p>Beauty boxes require trust. Users need proof, clarity, and confidence before they share contact details or pay. Generic layouts kill conversions.</p></div>
-              <div class="case-card" data-reveal data-reveal-delay="2"><h3>Goals</h3><p>Build a premium look, explain the offer fast, and guide users through a simple flow — learn, trust, order. Every section should answer an objection.</p></div>
+              <div class="case-card" data-reveal data-reveal-delay="1">
+                <h3>Problem</h3>
+                <p>Beauty boxes require trust. Users need proof, clarity, and confidence before they share contact details or pay. Generic layouts kill conversions.</p>
+              </div>
+              <div class="case-card" data-reveal data-reveal-delay="2">
+                <h3>Goals</h3>
+                <p>Build a premium look, explain the offer fast, and guide users through a simple flow — learn, trust, order. Every section should answer an objection.</p>
+              </div>
             </div>
           </section>
 
+          <!-- PROCESS -->
           <section class="case-section" id="process" data-reveal>
             <h2 class="case-h2">Process</h2>
             <p class="case-p">I worked from story structure to reusable components. Each step focused on clarity, hierarchy, and conversion.</p>
@@ -149,6 +174,7 @@
             </div>
           </section>
 
+          <!-- COLORS -->
           <section class="case-section" id="colors" data-reveal>
             <h2 class="case-h2">Colors and typography</h2>
             <p class="case-p">A calm, clean palette with one strong blue for actions. Editorial headings create a premium vibe, while the UI font keeps details readable.</p>
@@ -160,71 +186,108 @@
               <div class="sw" style="--c:#e8c15a"><span>Warm</span><b>#E8C15A</b></div>
             </div>
             <div class="case-type-row">
-  <div class="type-card">
-    <span class="type-k">DISPLAY FONT</span>
-    <div class="type-s">Cormorant Garamond</div>
-    <div class="type-ex" style="font-family:'Cormorant Garamond',serif; font-style:italic;">Beauty from Korea</div>
-  </div>
-  <div class="type-card">
-    <span class="type-k">UI FONT</span>
-    <div class="type-s">DM Sans</div>
-    <div class="type-ex" style="font-family:'DM Sans',sans-serif;">Clear UI and body text</div>
-  </div>
-</div>
-  
-          </section>
-
-          <section class="case-section" id="landing" data-reveal>
-            <div class="landing-head"><div class="case-eyebrow">FULL PAGE DESIGN</div><h2 class="case-h2">The complete landing experience.</h2></div>
-            <div class="landing-grid">
-              <div class="landing-full">
-                <!-- FULL LANDING PAGE: main page -->
-                <div class="landing-card"><img src="/assets/images/unniebox/main%20page.png" alt="Full landing page design"></div>
-                <button class="landing-expand" type="button" id="expandFull">Expand full page ↗</button>
+              <div class="type-card">
+                <span class="type-k">DISPLAY FONT</span>
+                <div class="type-s">Cormorant Garamond</div>
+                <div class="type-ex" style="font-family:'Cormorant Garamond',serif;font-style:italic;">Beauty from Korea</div>
               </div>
-              <div class="landing-modals">
-                <!-- MODALS SIDEBAR -->
-                <div class="modal-card" data-reveal data-reveal-delay="1"><div class="modal-tag">LEAD CAPTURE</div><img src="/assets/images/unniebox/UX%20flows3.png" alt="Lead capture modal"></div>
-                <div class="modal-card" data-reveal data-reveal-delay="2"><div class="modal-tag">INSTAGRAM CTA</div><img src="/assets/images/unniebox/UX%20flows4.png" alt="Instagram modal"></div>
-                <div class="modal-card" data-reveal data-reveal-delay="3"><div class="modal-tag">PAYMENT HELP</div><img src="/assets/images/unniebox/UX%20flows5.png" alt="Payment modal"></div>
+              <div class="type-card">
+                <span class="type-k">UI FONT</span>
+                <div class="type-s">DM Sans</div>
+                <div class="type-ex" style="font-family:'DM Sans',sans-serif;">Clear UI and body text</div>
               </div>
             </div>
           </section>
 
+          <!-- LANDING — FULL PAGE -->
+          <section class="case-section" id="landing" data-reveal>
+            <div class="landing-head">
+              <div class="case-eyebrow">FULL PAGE DESIGN</div>
+              <h2 class="case-h2">The complete landing experience.</h2>
+            </div>
+
+            <!-- Главная страница — полная ширина -->
+            <div class="pf pf--full" style="margin-top:20px" data-reveal data-reveal-delay="1">
+              <img src="/assets/images/unniebox/main%20page.png" alt="Full landing page design">
+              <span class="pf__tag">Full Landing Page</span>
+            </div>
+
+            <!-- Модалки рядом — 3 штуки -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/unniebox/UX%20flows3.png" alt="Lead capture modal">
+                <span class="pf__tag pf__tag--after">Lead Capture</span>
+              </div>
+              <div class="pf" data-reveal data-reveal-delay="2">
+                <img src="/assets/images/unniebox/UX%20flows4.png" alt="Instagram modal">
+                <span class="pf__tag pf__tag--after">Instagram CTA</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- UI KIT -->
           <section class="case-section" id="uikit" data-reveal>
             <h2 class="case-h2">UI kit</h2>
             <p class="case-p">Reusable components designed for speed: buttons, cards, icons, tags, and input fields.</p>
-            <div class="case-gallery">
-              <!-- UI KIT -->
-              <div class="case-img g-col-12" data-reveal><img src="/assets/images/unniebox/UIkit.png" alt="UI kit components"></div>
+
+            <!-- UI Kit — без обрезки, показываем полностью -->
+            <div class="pf pf--uikit" style="margin-top:20px;border:2px solid rgba(100,180,255,0.35);box-shadow:0 0 60px rgba(100,180,255,0.10)" data-reveal data-reveal-delay="1">
+              <img src="/assets/images/unniebox/UIkit.png" alt="UI kit components">
+              <span class="pf__tag">UI Kit — Full Component Library</span>
             </div>
           </section>
 
+          <!-- MODALS -->
           <section class="case-section" id="modals" data-reveal>
             <h2 class="case-h2">Modal UX flows</h2>
             <p class="case-p">Instead of pushing users away from the main flow, key interactions open in modals. This keeps focus on conversion.</p>
-            <div class="ub-screens-grid">
-              <!-- ALL 5 MODAL SCREENS -->
-              <div class="ub-screen-card" data-reveal data-reveal-delay="1"><span class="ub-screen-tag">Skin guide CTA</span><img src="/assets/images/unniebox/UX%20flows1.png" alt="Skin guide modal"></div>
-              <div class="ub-screen-card" data-reveal data-reveal-delay="2"><span class="ub-screen-tag">Instagram follow</span><img src="/assets/images/unniebox/UX%20flows2.png" alt="Instagram modal"></div>
-              <div class="ub-screen-card" data-reveal data-reveal-delay="3"><span class="ub-screen-tag">Payment troubleshoot</span><img src="/assets/images/unniebox/UX%20flows3.png" alt="Payment modal"></div>
-              <div class="ub-screen-card" data-reveal data-reveal-delay="4"><span class="ub-screen-tag">Order form</span><img src="/assets/images/unniebox/UX%20flows4.png" alt="Order form modal"></div>
-              <div class="ub-screen-card full" data-reveal data-reveal-delay="1"><span class="ub-screen-tag">Daily care tip</span><img src="/assets/images/unniebox/UX%20flows5.png" alt="Daily care modal"></div>
+
+            <!-- 4 модалки 2x2 -->
+            <div class="pf-grid" style="margin-top:20px">
+              <div class="pf" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/unniebox/UX%20flows1.png" alt="Skin guide modal">
+                <span class="pf__tag">Skin guide CTA</span>
+              </div>
+              <div class="pf" data-reveal data-reveal-delay="2">
+                <img src="/assets/images/unniebox/UX%20flows2.png" alt="Instagram modal">
+                <span class="pf__tag">Instagram follow</span>
+              </div>
+              <div class="pf" data-reveal data-reveal-delay="3">
+                <img src="/assets/images/unniebox/UX%20flows3.png" alt="Payment modal">
+                <span class="pf__tag">Payment troubleshoot</span>
+              </div>
+              <div class="pf" data-reveal data-reveal-delay="4">
+                <img src="/assets/images/unniebox/UX%20flows4.png" alt="Order form modal">
+                <span class="pf__tag">Order form</span>
+              </div>
+            </div>
+
+            <!-- Последняя широкая -->
+            <div class="pf pf--full" style="margin-top:16px" data-reveal data-reveal-delay="1">
+              <img src="/assets/images/unniebox/UX%20flows5.png" alt="Daily care modal">
+              <span class="pf__tag">Daily care tip</span>
             </div>
           </section>
 
+          <!-- BRANDING -->
           <section class="case-section" id="branding" data-reveal>
             <h2 class="case-h2">Branding and mockups</h2>
             <p class="case-p">The wordmark uses a simple gift icon replacing the "O" in BOX — making the idea instantly readable.</p>
-            <div class="case-gallery">
-              <!-- LOGOS -->
-              <div class="case-img g-col-6" data-reveal data-reveal-delay="1"><img src="/assets/images/unniebox/logo%20black.png" alt="Logo dark"></div>
-              <div class="case-img g-col-6" data-reveal data-reveal-delay="2"><img src="/assets/images/unniebox/lgoo%20white%202.png" alt="Logo light"></div>
-              <div class="case-img g-col-12" data-reveal data-reveal-delay="1"><img src="/assets/images/unniebox/logo%20black.png" alt="Logo mockup"></div>
-              <div class="case-img g-col-12" data-reveal data-reveal-delay="2"><img src="/assets/images/unniebox/lgoo%20white%202.png" alt="Logo mockup 2"></div>
+
+            <!-- Логотипы рядом -->
+            <div class="pf-grid" style="margin-top:20px">
+              <div class="pf" style="background:#111;border-color:rgba(255,255,255,0.12)" data-reveal data-reveal-delay="1">
+                <img src="/assets/images/unniebox/logo%20black.png" alt="Logo dark">
+                <span class="pf__tag">Logo — Dark</span>
+              </div>
+              <div class="pf" style="background:#f5f5f5;border-color:rgba(0,0,0,0.08)" data-reveal data-reveal-delay="2">
+                <img src="/assets/images/unniebox/lgoo%20white%202.png" alt="Logo light">
+                <span class="pf__tag">Logo — Light</span>
+              </div>
             </div>
           </section>
 
+          <!-- LEARNINGS -->
           <section class="case-section" id="learnings" data-reveal>
             <div class="case-eyebrow">KEY LEARNINGS</div>
             <h2 class="case-h2">What I learned building this.</h2>
@@ -234,6 +297,7 @@
               <div class="learn-card" data-reveal data-reveal-delay="3"><div class="learn-n">03</div><div class="learn-t">Typography sets the tone</div><div class="learn-p">Editorial display type feels premium but must be balanced with clean UI text.</div></div>
               <div class="learn-card" data-reveal data-reveal-delay="4"><div class="learn-n">04</div><div class="learn-t">Trust signals must be authentic</div><div class="learn-p">Real credentials, clear reviews, and transparent steps build confidence quickly.</div></div>
             </div>
+
             <div class="ub-cta-banner" data-reveal>
               <h3>Let's build something great together.</h3>
               <p>I'm a UI/UX designer focused on clean, conversion-friendly experiences. Let's talk.</p>
@@ -243,16 +307,40 @@
               </div>
             </div>
           </section>
+
         </section>
       </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="case-footer case-footer--ub">
       <div class="case-footer__inner">
-        <div class="case-footer__brand"><img src="/assets/images/DIN.png" alt="DIN Logo" class="case-footer__logo"><p class="case-footer__tagline">Creative designer crafting digital experiences that matter.</p></div>
-        <div class="case-footer__col"><p class="case-footer__title">Navigation</p><nav class="case-footer__nav"><a href="../index.html">Home</a><a href="../gallery.html">Gallery</a><a href="../about.html">About</a><a href="../contactus.html">Contact</a></nav></div>
-        <div class="case-footer__col"><p class="case-footer__title">Contact</p><div class="case-footer__item">din.design.world@gmail.com</div><div class="case-footer__item">Canada</div></div>
-        <div class="case-footer__col"><p class="case-footer__title">Newsletter</p><p class="case-footer__hint">Stay updated with new projects.</p><form class="case-footer__form" id="newsletterForm"><input type="email" id="newsletterEmail" placeholder="your@email.com"><button type="submit">Subscribe</button></form></div>
+        <div class="case-footer__brand">
+          <img src="/assets/images/DIN.png" alt="DIN Logo" class="case-footer__logo">
+          <p class="case-footer__tagline">Creative designer crafting digital experiences that matter.</p>
+        </div>
+        <div class="case-footer__col">
+          <p class="case-footer__title">Navigation</p>
+          <nav class="case-footer__nav">
+            <a href="../index.html">Home</a>
+            <a href="../gallery.html">Gallery</a>
+            <a href="../about.html">About</a>
+            <a href="../contactus.html">Contact</a>
+          </nav>
+        </div>
+        <div class="case-footer__col">
+          <p class="case-footer__title">Contact</p>
+          <div class="case-footer__item">din.design.world@gmail.com</div>
+          <div class="case-footer__item">Canada</div>
+        </div>
+        <div class="case-footer__col">
+          <p class="case-footer__title">Newsletter</p>
+          <p class="case-footer__hint">Stay updated with new projects.</p>
+          <form class="case-footer__form" id="newsletterForm" onsubmit="return false">
+            <input type="email" id="newsletterEmail" placeholder="your@email.com">
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
       </div>
       <div class="case-footer__bottom">
         <span>© 2025 DIN. All rights reserved.</span>
@@ -260,51 +348,22 @@
         <div class="case-footer__proj-nav">
           <a href="../gallery.html">All projects</a>
           <a href="clm.html">← Prev</a>
-          <a href="avion.html"> Next →</a>
+          <a href="avion.html">Next →</a>
           <a class="cta" href="../contactus.html">Hire me →</a>
         </div>
       </div>
     </footer>
-  </div>
 
-  <div class="img-modal" id="imgModal" aria-hidden="true">
-    <div class="img-modal-backdrop" data-close></div>
-    <div class="img-modal-card" role="dialog" aria-modal="true">
-      <button class="img-modal-close" type="button" data-close>✕</button>
-      <img id="imgModalSrc" src="/assets/images/unniebox/main%20page.png" alt="Preview">
-    </div>
-  </div>
+  </div><!-- /ub-page-wrap -->
+
+  <!-- MUSIC -->
   <audio id="bgMusic" src="/assets/music/muzyka-ochen-krasivaya-pianino.mp3" loop></audio>
   <button id="musicBtn" class="music-btn" title="Toggle music">🎵</button>
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/unniebox.js"></script>
-  <script>
-    const progressBar = document.getElementById('ubProgress');
-    window.addEventListener('scroll', () => {
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      progressBar.style.width = (window.scrollY / total * 100) + '%';
-    }, { passive: true });
-    const revObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revObs.unobserve(e.target); } });
-    }, { threshold: 0.07 });
-    document.querySelectorAll('[data-reveal]').forEach(el => revObs.observe(el));
-    const subnavLinks = document.querySelectorAll('.case-subnav-pill a');
-    const secObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const id = e.target.id;
-        subnavLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
-      });
-    }, { threshold: 0.22 });
-    document.querySelectorAll('.case-section[id]').forEach(s => secObs.observe(s));
-    const modal = document.getElementById('imgModal');
-    const modalImg = document.getElementById('imgModalSrc');
-    function openModal(src) { modalImg.src = src; modal.classList.add('open'); modal.setAttribute('aria-hidden', 'false'); document.body.classList.add('no-scroll'); }
-    document.querySelectorAll('.ub-product-card img, .ub-screen-card img, .case-img img, .landing-card img, .modal-card img').forEach(img => { img.style.cursor = 'zoom-in'; img.addEventListener('click', () => openModal(img.src)); });
-    document.getElementById('expandFull')?.addEventListener('click', () => openModal('/assets/images/unniebox/main%20page.png'));
-    modal.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => { modal.classList.remove('open'); modal.setAttribute('aria-hidden', 'true'); document.body.classList.remove('no-scroll'); }));
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') { modal.classList.remove('open'); document.body.classList.remove('no-scroll'); } });
-  </script>
+  <!-- SCRIPTS -->
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/unniebox.js" defer></script>
+  <script src="/assets/js/project-frames.js" defer></script>
+
 </body>
 </html>

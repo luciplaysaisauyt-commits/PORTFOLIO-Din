@@ -3,32 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DIN – Products Case Study</title>
+  <title>DIN – Avion Products Case Study</title>
   <link rel="icon" type="image/png" href="/assets/images/DIN.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
   <link rel="stylesheet" href="/assets/css/avion.css">
+  <link rel="stylesheet" href="/assets/css/project-frames.css">
 </head>
 
-<body>
+<body class="theme-avion">
 
-  <!-- AMBIENT -->
   <div class="ps-bg"></div>
   <div class="ps-grid"></div>
   <div class="ps-orb ps-orb-1"></div>
   <div class="ps-orb ps-orb-2"></div>
   <div class="ps-orb ps-orb-3"></div>
   <div class="ps-orb ps-orb-4"></div>
-
-  <!-- PROGRESS -->
   <div class="ps-progress" id="psProgress"></div>
-
-  <!-- CURSOR -->
-  <div class="din-cursor" id="dinCursor"></div>
-  <div class="din-cursor-ring" id="dinCursorRing"></div>
 
   <!-- HEADER -->
   <header class="nav" id="topnav">
@@ -46,7 +41,6 @@
   <nav class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-panel">
       <div class="mobile-menu-top">
-        <div class="mobile-logo" aria-hidden="true"></div>
         <button class="mobile-close" id="mobileClose" type="button">&times;</button>
       </div>
       <div class="mobile-menu-links">
@@ -64,18 +58,15 @@
     <nav class="case-subnav">
       <div class="case-subnav-pill" role="navigation" aria-label="Case sections">
         <a href="#overview"  class="case-subnav-link">Overview</a>
-        <a href="#products"  class="case-subnav-link">Products</a>
         <a href="#problem"   class="case-subnav-link">Problem</a>
         <a href="#process"   class="case-subnav-link">Process</a>
-        <a href="#colors"    class="case-subnav-link">Colors &amp; Type</a>
+        <a href="#colors"    class="case-subnav-link">Colors & Type</a>
         <a href="#screens"   class="case-subnav-link">Screens</a>
-        <a href="#uikit"     class="case-subnav-link">UI Kit</a>
-        <a href="#branding"  class="case-subnav-link">Branding</a>
+        <a href="#mobile"    class="case-subnav-link">Mobile</a>
         <a href="#learnings" class="case-subnav-link">Learnings</a>
       </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
     <main style="position:relative;z-index:1;color:#fff;padding-top:14px">
       <div class="case-wrap">
 
@@ -84,36 +75,38 @@
           <div>
             <div class="ps-hero-accent"></div>
             <div class="case-eyebrow">UI Web Design · Case Study</div>
-            <h1 class="case-title">Products<br>Shop</h1>
+            <h1 class="case-title">Avion<br>Shop</h1>
             <p class="case-sub">A full e-commerce product experience — from hero landing to detail pages — designed for clarity, trust, and conversion. Every screen built on a cohesive design system.</p>
             <div class="case-actions">
               <a class="btn-case primary" href="../gallery.html">← Back to gallery</a>
               <a class="btn-case" href="../contactus.html">Get in touch</a>
               <a class="btn-case" href="unnie-box.html">← Prev</a>
+              <a class="btn-case" href="mschf.html">Next →</a>
             </div>
             <div class="case-meta">
               <div class="meta-card"><div class="meta-k">Role</div><div class="meta-v">UI / UX Designer</div></div>
               <div class="meta-card"><div class="meta-k">Tools</div><div class="meta-v"><span class="chip">Figma</span><span class="chip">Illustrator</span></div></div>
               <div class="meta-card"><div class="meta-k">Focus</div><div class="meta-v">E-commerce · Design system · Components</div></div>
-              <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">Screens · UI kit · Mockups</div></div>
+              <div class="meta-card"><div class="meta-k">Deliverables</div><div class="meta-v">15+ screens · Web & Mobile</div></div>
             </div>
           </div>
-          <div class="ps-hero-image-wrap" data-reveal data-reveal-delay="2">
-            <img src="/assets/images/avion/Products(v1)[Desktop]1773033208.webp" alt="Products shop — desktop hero" loading="lazy">
-            <div class="ps-hero-overlay"></div>
-            <span class="ps-hero-badge">Desktop v1</span>
+
+          <!-- HERO IMAGE -->
+          <div class="pf pf--desktop" style="border-radius:24px;border-color:rgba(200,180,140,0.28)" data-reveal data-reveal-delay="2">
+            <img src="/assets/images/avion/Products(v1)[Desktop]1773033208.webp" alt="Avion desktop hero" loading="lazy">
+            <div class="pf__overlay"></div>
+            <span class="pf__badge">Desktop v1</span>
           </div>
         </div>
 
-        <!-- SECTIONS -->
         <div class="case-sections">
 
           <!-- OVERVIEW -->
           <section class="case-section" id="overview" data-reveal>
             <div class="case-eyebrow">Project Overview</div>
             <h2 class="case-h2">A product shop built to convert.</h2>
-            <p class="case-p">This project covers the complete shopping experience — from the home landing page to product listing and detail pages, across desktop and mobile. The challenge: make browsing feel effortless, and buying feel confident.</p>
-            <p class="case-p" style="margin-top:12px">I designed the full UI system — from the grid and card hierarchy to every hover state, responsive layout, and CTA placement.</p>
+            <p class="case-p">Complete shopping experience — from home landing to product listing and detail pages, across desktop and mobile. The challenge: make browsing effortless and buying feel confident.</p>
+            <p class="case-p" style="margin-top:12px">Full UI system designed — from grid and card hierarchy to every hover state, responsive layout, and CTA placement.</p>
             <div class="case-stats">
               <div class="stat" data-reveal data-reveal-delay="1"><div class="stat-n">15+</div><div class="stat-t">Unique screens designed</div></div>
               <div class="stat" data-reveal data-reveal-delay="2"><div class="stat-n">3</div><div class="stat-t">Product page versions</div></div>
@@ -121,45 +114,19 @@
             </div>
           </section>
 
-          <!-- PRODUCTS -->
-          <section class="case-section" id="products" data-reveal>
-            <h2 class="case-h2">Product pages</h2>
-            <p class="case-p">Three distinct design approaches for the product listing — each tested for scannability, visual hierarchy, and mobile-first conversion.</p>
-            <div class="ps-products-grid">
-              <div class="ps-product-card" data-reveal data-reveal-delay="1">
-                <img src="/assets/images/avion/Productv3(5)1773033221.webp" alt="Product v3" loading="lazy">
-                <span class="ps-product-pill">Product v3</span>
-              </div>
-              <div class="ps-product-card" data-reveal data-reveal-delay="2">
-                <img src="/assets/images/avion/Products(v3 )[Desktop]1773033210.webp" alt="Products v3 Desktop" loading="lazy">
-                <span class="ps-product-pill">v3 — Desktop</span>
-              </div>
-              <div class="ps-product-card" data-reveal data-reveal-delay="3">
-                <img src="/assets/images/avion/Products(v3) [Mobile]1773033213.webp" alt="Products v3 Mobile" loading="lazy">
-                <span class="ps-product-pill">v3 — Mobile</span>
-              </div>
-            </div>
-          </section>
-
           <!-- PROBLEM -->
           <section class="case-section" id="problem" data-reveal>
             <h2 class="case-h2">Problem and goals</h2>
             <div class="case-grid2">
-              <div class="case-card" data-reveal data-reveal-delay="1">
-                <h3>Problem</h3>
-                <p>Most product pages overwhelm users with choice. Without clear hierarchy and trust cues, shoppers bounce before they reach the cart.</p>
-              </div>
-              <div class="case-card" data-reveal data-reveal-delay="2">
-                <h3>Goals</h3>
-                <p>Create a shopping experience that guides users naturally from discovery to purchase — clean layouts, confident CTAs, and a system that scales.</p>
-              </div>
+              <div class="case-card" data-reveal data-reveal-delay="1"><h3>Problem</h3><p>Most product pages overwhelm users with choice. Without clear hierarchy and trust cues, shoppers bounce before they reach the cart.</p></div>
+              <div class="case-card" data-reveal data-reveal-delay="2"><h3>Goals</h3><p>Create a shopping experience that guides users naturally from discovery to purchase — clean layouts, confident CTAs, and a system that scales.</p></div>
             </div>
           </section>
 
           <!-- PROCESS -->
           <section class="case-section" id="process" data-reveal>
             <h2 class="case-h2">Process</h2>
-            <p class="case-p">From structure to polished components — each phase was focused on speed-to-clarity for the user.</p>
+            <p class="case-p">From structure to polished components — each phase focused on speed-to-clarity for the user.</p>
             <div class="case-process">
               <div class="pstep" data-reveal data-reveal-delay="1"><div class="pnum">01</div><div class="ptitle">Information architecture</div><div class="pdesc">Mapped user flows, page hierarchy, and shopping funnel to define content priorities.</div></div>
               <div class="pstep" data-reveal data-reveal-delay="2"><div class="pnum">02</div><div class="ptitle">Design system</div><div class="pdesc">Built tokens for color, spacing, and type. Defined card, button, and input components upfront.</div></div>
@@ -168,7 +135,7 @@
             </div>
           </section>
 
-          <!-- COLORS & TYPE -->
+          <!-- COLORS -->
           <section class="case-section" id="colors" data-reveal>
             <h2 class="case-h2">Colors and typography</h2>
             <p class="case-p">A deep indigo-led palette — authoritative and premium. A single bright accent for actions, balanced by neutral surfaces.</p>
@@ -193,128 +160,83 @@
             </div>
           </section>
 
-          <!-- SCREENS -->
+          <!-- SCREENS — WEB ONLY -->
           <section class="case-section" id="screens" data-reveal>
-            <h2 class="case-h2">All screens</h2>
-            <p class="case-p">Desktop and mobile — every page version designed and refined for the full browsing experience.</p>
+            <div class="case-eyebrow">Desktop Screens</div>
+            <h2 class="case-h2">Web screens.</h2>
+            <p class="case-p">Homepage versions and product listing pages — designed for wide screens with generous whitespace and strong visual hierarchy.</p>
 
-            <p style="font-family:var(--font-body);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(114,110,141,.7);margin:18px 0 10px">Homepage</p>
-            <div class="ps-screens-grid">
-              <div class="ps-screen-card full" data-reveal data-reveal-delay="1">
-                <span class="ps-screen-tag">Home v1</span>
-                <img src="/assets/images/avion/Homev1773033204.webp" alt="Home v1" loading="lazy">
-              </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="2">
-                <span class="ps-screen-tag">Home v1-1</span>
+            <!-- Homepage full -->
+            <div class="pf pf--full pf--desktop" style="margin-top:20px" data-reveal data-reveal-delay="1">
+              <span class="pf__tag">Home v1 — Full</span>
+              <img src="/assets/images/avion/Homev1773033204.webp" alt="Home v1" loading="lazy">
+            </div>
+
+            <!-- Home versions -->
+            <div class="pf-grid" style="margin-top:16px">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Home v1-1</span>
                 <img src="/assets/images/avion/Homev1(1)1773033199.webp" alt="Home v1-1" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="3">
-                <span class="ps-screen-tag">Home v1-2</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Home v1-2</span>
                 <img src="/assets/images/avion/Homev(2)1773033198.webp" alt="Home v1-2" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="4">
-                <span class="ps-screen-tag">Home v1-3</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="3">
+                <span class="pf__tag">Home v1-3</span>
                 <img src="/assets/images/avion/Homev1(3)1773033203.webp" alt="Home v1-3" loading="lazy">
               </div>
-            </div>
-
-            <p style="font-family:var(--font-body);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(114,110,141,.7);margin:22px 0 10px">Products — Desktop &amp; Mobile</p>
-            <div class="ps-screens-grid">
-              <div class="ps-screen-card" data-reveal data-reveal-delay="1">
-                <span class="ps-screen-tag">Products v1 — Desktop</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="4">
+                <span class="pf__tag">Products v1 — Desktop</span>
                 <img src="/assets/images/avion/Products(v1)[Desktop]1773033208.webp" alt="Products v1 Desktop" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="2">
-                <span class="ps-screen-tag">Products v1 — Mobile</span>
-                <img src="/assets/images/avion/Products(v1)[Mobile]1773033208.webp" alt="Products v1 Mobile" loading="lazy">
-              </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="3">
-                <span class="ps-screen-tag">Products v3 — Desktop</span>
+            </div>
+
+            <!-- Products desktop -->
+            <p style="font-family:var(--font-body);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(114,110,141,.7);margin:24px 0 10px">Product pages</p>
+            <div class="pf-grid" style="margin-top:0">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Products v3 — Desktop</span>
                 <img src="/assets/images/avion/Products(v3)[Desktop]1773033210.webp" alt="Products v3 Desktop" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="4">
-                <span class="ps-screen-tag">Products v3 — Mobile</span>
-                <img src="/assets/images/avion/Products(v3)[Mobile]1773033213.webp" alt="Products v3 Mobile" loading="lazy">
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Products v3 — Alt</span>
+                <img src="/assets/images/avion/Products(v3 )[Desktop]1773033210.webp" alt="Products v3 Alt" loading="lazy">
               </div>
-            </div>
-
-            <p style="font-family:var(--font-body);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:rgba(114,110,141,.7);margin:22px 0 10px">Product Detail</p>
-            <div class="ps-screens-grid">
-              <div class="ps-screen-card" data-reveal data-reveal-delay="1">
-                <span class="ps-screen-tag">Product v3</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="3">
+                <span class="pf__tag">Product Detail v3</span>
                 <img src="/assets/images/avion/Productv31773033228.webp" alt="Product v3" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="2">
-                <span class="ps-screen-tag">Product v3-1</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="4">
+                <span class="pf__tag">Product Detail v3-1</span>
                 <img src="/assets/images/avion/Productv3(1)1773033214.webp" alt="Product v3-1" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="3">
-                <span class="ps-screen-tag">Product v3-2</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Product Detail v3-2</span>
                 <img src="/assets/images/avion/Productv3(2)1773033217.webp" alt="Product v3-2" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="4">
-                <span class="ps-screen-tag">Product v3-3</span>
+              <div class="pf pf--desktop" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Product Detail v3-3</span>
                 <img src="/assets/images/avion/Productv3(3)1773033218.webp" alt="Product v3-3" loading="lazy">
               </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="1">
-                <span class="ps-screen-tag">Product v3-4</span>
-                <img src="/assets/images/avion/Productv3(4)1773033219.webp" alt="Product v3-4" loading="lazy">
-              </div>
-              <div class="ps-screen-card" data-reveal data-reveal-delay="2">
-                <span class="ps-screen-tag">Product v3-7</span>
-                <img src="/assets/images/avion/Productv3(7)1773033225.webp" alt="Product v3-7" loading="lazy">
-              </div>
             </div>
           </section>
 
-          <!-- UI KIT -->
-          <section class="case-section" id="uikit" data-reveal>
-            <h2 class="case-h2">UI kit</h2>
-            <p class="case-p">Every component documented — buttons, inputs, cards, badges, and states — so the system scales without design debt.</p>
-            <div class="case-gallery" style="margin-top:16px">
-              <div class="case-img g-col-12" data-reveal>
-                <img src="/assets/images/avion/Productv3(5)1773033221.webp" alt="UI Kit overview" loading="lazy">
-              </div>
-              <div class="case-img g-col-6" data-reveal data-reveal-delay="1">
-                <img src="/assets/images/avion/Productv3(6)1773033224.webp" alt="Component set A" loading="lazy">
-              </div>
-              <div class="case-img g-col-6" data-reveal data-reveal-delay="2">
-                <img src="/assets/images/avion/Productv3(8)1773033226.webp" alt="Component set B" loading="lazy">
-              </div>
-            </div>
-          </section>
+          <!-- MOBILE SCREENS -->
+          <section class="case-section" id="mobile" data-reveal>
+            <div class="case-eyebrow">Mobile Experience</div>
+            <h2 class="case-h2">Mobile screens.</h2>
+            <p class="case-p">Every page adapted for mobile — stacked layouts, thumb-friendly CTAs, and optimised product imagery. Mobile was treated as the primary browsing surface.</p>
 
-          <!-- BRANDING -->
-          <section class="case-section" id="branding" data-reveal>
-            <h2 class="case-h2">Branding and mockups</h2>
-            <p class="case-p">Final mockups showing the design applied across real screen contexts — establishing the visual identity of the product.</p>
-            <div class="landing-grid" style="margin-top:18px">
-              <div>
-                <div class="landing-card" data-reveal data-reveal-delay="1">
-                  <img src="/assets/images/avion/Products(v1)[Desktop]1773033208.webp" alt="Desktop mockup v1" loading="lazy">
-                </div>
-                <button class="landing-expand" type="button" id="expandFull">Expand full page ↗</button>
+            <!-- 2 мобильных рядом -->
+            <div class="pf-grid--mobile-2" style="margin-top:22px">
+              <div class="pf pf--mobile" data-reveal data-reveal-delay="1">
+                <span class="pf__tag">Products v1 — Mobile</span>
+                <img src="/assets/images/avion/Products(v1)[Mobile]1773033208.webp" alt="Products v1 Mobile" loading="lazy">
               </div>
-              <div class="landing-modals">
-                <div class="modal-card" data-reveal data-reveal-delay="2">
-                  <div class="modal-tag">Mobile v1</div>
-                  <img src="/assets/images/avion/Products(v1)[Mobile]1773033208.webp" alt="Mobile mockup v1" loading="lazy">
-                </div>
-                <div class="modal-card" data-reveal data-reveal-delay="3">
-                  <div class="modal-tag">Mobile v3</div>
-                  <img src="/assets/images/avion/Products(v3)[Mobile]1773033213.webp" alt="Mobile mockup v3" loading="lazy">
-                </div>
-              </div>
-            </div>
-            <div class="case-gallery" style="margin-top:16px">
-              <div class="case-img g-col-4" data-reveal data-reveal-delay="1">
-                <img src="/assets/images/avion/Productv3(9)1773033227.webp" alt="Detail screen 9" loading="lazy">
-              </div>
-              <div class="case-img g-col-4" data-reveal data-reveal-delay="2">
-                <img src="/assets/images/avion/Productv3(10)1773033216.webp" alt="Detail screen 10" loading="lazy">
-              </div>
-              <div class="case-img g-col-4" data-reveal data-reveal-delay="3">
-                <img src="/assets/images/avion/Productv3(11)1773033217.webp" alt="Detail screen 11" loading="lazy">
+              <div class="pf pf--mobile" data-reveal data-reveal-delay="2">
+                <span class="pf__tag">Products v3 — Mobile</span>
+                <img src="/assets/images/avion/Products(v3)[Mobile]1773033213.webp" alt="Products v3 Mobile" loading="lazy">
               </div>
             </div>
           </section>
@@ -324,26 +246,10 @@
             <div class="case-eyebrow">Key Learnings</div>
             <h2 class="case-h2">What I learned building this.</h2>
             <div class="learn-grid">
-              <div class="learn-card" data-reveal data-reveal-delay="1">
-                <div class="learn-n">01</div>
-                <div class="learn-t">Grid systems drive consistency</div>
-                <div class="learn-p">A strong base grid makes responsive adaptation much smoother and keeps visual rhythm intact.</div>
-              </div>
-              <div class="learn-card" data-reveal data-reveal-delay="2">
-                <div class="learn-n">02</div>
-                <div class="learn-t">Design from mobile first</div>
-                <div class="learn-p">Starting with the smallest screen forces ruthless prioritization of content hierarchy.</div>
-              </div>
-              <div class="learn-card" data-reveal data-reveal-delay="3">
-                <div class="learn-n">03</div>
-                <div class="learn-t">CTAs need contrast and space</div>
-                <div class="learn-p">Action buttons buried in visual noise lose clicks. White space and contrast direct the eye.</div>
-              </div>
-              <div class="learn-card" data-reveal data-reveal-delay="4">
-                <div class="learn-n">04</div>
-                <div class="learn-t">Versioning surfaces decisions</div>
-                <div class="learn-p">Designing multiple versions of the same screen makes the right choices clear through comparison.</div>
-              </div>
+              <div class="learn-card" data-reveal data-reveal-delay="1"><div class="learn-n">01</div><div class="learn-t">Grid systems drive consistency</div><div class="learn-p">A strong base grid makes responsive adaptation much smoother and keeps visual rhythm intact.</div></div>
+              <div class="learn-card" data-reveal data-reveal-delay="2"><div class="learn-n">02</div><div class="learn-t">Design from mobile first</div><div class="learn-p">Starting with the smallest screen forces ruthless prioritization of content hierarchy.</div></div>
+              <div class="learn-card" data-reveal data-reveal-delay="3"><div class="learn-n">03</div><div class="learn-t">CTAs need contrast and space</div><div class="learn-p">Action buttons buried in visual noise lose clicks. White space and contrast direct the eye.</div></div>
+              <div class="learn-card" data-reveal data-reveal-delay="4"><div class="learn-n">04</div><div class="learn-t">Versioning surfaces decisions</div><div class="learn-p">Designing multiple versions of the same screen makes the right choices clear through comparison.</div></div>
             </div>
             <div class="ps-cta-banner" data-reveal>
               <h3>Let's build something great together.</h3>
@@ -355,35 +261,18 @@
             </div>
           </section>
 
-        </div><!-- /case-sections -->
-      </div><!-- /case-wrap -->
+        </div>
+      </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="case-footer case-footer--clm">
       <div class="case-footer__inner">
-        <div class="case-footer__brand">
-          <img src="/assets/images/DIN.png" alt="DIN Logo" class="case-footer__logo">
-          <p class="case-footer__tagline">Creative designer crafting digital experiences that matter.</p>
-        </div>
-        <div class="case-footer__col">
-          <p class="case-footer__title">Navigation</p>
-          <nav class="case-footer__nav">
-            <a href="../index.html">Home</a>
-            <a href="../gallery.html">Gallery</a>
-            <a href="../about.html">About</a>
-            <a href="../contactus.html">Contact</a>
-          </nav>
-        </div>
-        <div class="case-footer__col">
-          <p class="case-footer__title">Contact</p>
-          <div class="case-footer__item">din.design.world@gmail.com</div>
-          <div class="case-footer__item">Canada</div>
-        </div>
-        <div class="case-footer__col">
-          <p class="case-footer__title">Newsletter</p>
-          <p class="case-footer__hint">Stay updated with new projects.</p>
-          <form class="case-footer__form" id="newsletterForm">
+        <div class="case-footer__brand"><img src="/assets/images/DIN.png" alt="DIN Logo" class="case-footer__logo"><p class="case-footer__tagline">Creative designer crafting digital experiences that matter.</p></div>
+        <div class="case-footer__col"><p class="case-footer__title">Navigation</p><nav class="case-footer__nav"><a href="../index.html">Home</a><a href="../gallery.html">Gallery</a><a href="../about.html">About</a><a href="../contactus.html">Contact</a></nav></div>
+        <div class="case-footer__col"><p class="case-footer__title">Contact</p><div class="case-footer__item">din.design.world@gmail.com</div><div class="case-footer__item">Canada</div></div>
+        <div class="case-footer__col"><p class="case-footer__title">Newsletter</p><p class="case-footer__hint">Stay updated with new projects.</p>
+          <form class="case-footer__form" id="newsletterForm" onsubmit="return false">
             <input type="email" id="newsletterEmail" placeholder="your@email.com">
             <button type="submit">Subscribe</button>
           </form>
@@ -391,7 +280,7 @@
       </div>
       <div class="case-footer__bottom">
         <span>© 2025 DIN. All rights reserved.</span>
-        <span class="case-footer__case-label">Products Shop · UI UX Case Study</span>
+        <span class="case-footer__case-label">Avion Shop · UI UX Case Study</span>
         <div class="case-footer__proj-nav">
           <a href="../gallery.html">All projects</a>
           <a href="unnie-box.html">← Prev</a>
@@ -400,15 +289,6 @@
       </div>
     </footer>
 
-  </div><!-- /ps-page-wrap -->
-
-  <!-- IMAGE MODAL -->
-  <div class="img-modal" id="imgModal" aria-hidden="true">
-    <div class="img-modal-backdrop" data-close></div>
-    <div class="img-modal-card" role="dialog" aria-modal="true">
-      <button class="img-modal-close" type="button" data-close>✕</button>
-      <img id="imgModalSrc" src="" alt="Preview">
-    </div>
   </div>
 
   <audio id="bgMusic" src="/assets/music/muzyka-ochen-krasivaya-pianino.mp3" loop></audio>
@@ -416,6 +296,7 @@
 
   <script src="/assets/js/main.js" defer></script>
   <script src="/assets/js/avion.js" defer></script>
+  <script src="/assets/js/project-frames.js" defer></script>
 
 </body>
 </html>
